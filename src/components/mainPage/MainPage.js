@@ -1,8 +1,12 @@
 import React, {Component} from 'react'
 import Grid from '@material-ui/core/Grid'
-import CardList from './CardList'
+import CardList from './cardList/CardList'
 import Typography from '@material-ui/core/Typography'
 import LeftMenu from './LeftMenu'
+import Feed from './feed/Feed'
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import Profile from "./profile/Profile";
+
 
 const dashboardList = [
   {
@@ -25,13 +29,13 @@ const dashboardList = [
 
 const listItems = [
   {
-    name: 'Главная', href: '',
+    name: 'Главная', href: '/home/feed',
   },
   {
-    name: 'Доски', href: ''
+    name: 'Доски', href: '/home/dashboardList'
   },
   {
-    name: 'Профиль', href: ''
+    name: 'Профиль', href: '/home/profile'
   }
 ];
 
@@ -43,7 +47,7 @@ class MainPage extends Component {
   }
 
   render() {
-
+    const {match} = this.props;
     return (
       <Grid container direction="row" justify="center"  spacing={16}>
         <Grid item xs={3} key="1" >
@@ -52,12 +56,10 @@ class MainPage extends Component {
           />
         </Grid>
         <Grid item xs={9} key="2">
-          <Typography>Доски</Typography>
-
-          <CardList
-            dashboardList={dashboardList}
-          />
-
+          <Route exact path={`${match.url}/`} component={CardList}/>
+          <Route path={`${match.url}/dashboardList`} component = {CardList}/>
+          <Route path={`${match.url}/feed`} component = {Feed}/>
+          <Route path={`${match.url}/profile`} component = {Profile}/>
         </Grid>
       </Grid>
     )

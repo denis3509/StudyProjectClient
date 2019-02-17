@@ -9,12 +9,33 @@ class CardList extends Component {
   }
 
   render() {
-    const {dashboardList} = this.props;
+    //const {dashboardList} = this.props;
+
+    const dashboardList = [
+      {
+        name: "client",
+        description: "",
+        users: [],
+      },
+      {
+        name: "server",
+        description: "",
+        users: [],
+      },
+      {
+        name: "database",
+        description: "",
+        users: [],
+      },
+
+    ];
     return (
       <Grid container spacing={16}>
-        {dashboardList.map((dashboardInfo) => {
+        {
+
+          dashboardList.map((dashboardInfo) => {
           return (
-            <Grid item direction="row">
+            <Grid item direction="row"  >
               <DashboardCard
                 name={dashboardInfo.name}
                 description={dashboardInfo.description}

@@ -11,7 +11,7 @@ import DraftsIcon from '@material-ui/icons/Drafts';
 
 const styles = theme => ({
   root: {
-    maxWidth: 100,
+    maxWidth: 300,
     backgroundColor: theme.palette.background.paper,
   },
 });
@@ -28,9 +28,11 @@ function LeftMenu(props) {
       <List component="nav">
         {
           listItems.map((listItem) => {
-            return (<ListItemLink href={listItem.link}>
-              <ListItemText primary={listItem.name}/>
-            </ListItemLink>)
+            return (
+              <ListItemLink href={listItem.href}>
+                <ListItemText primary={listItem.name}/>
+              </ListItemLink>
+            )
           })
         }
       </List>
