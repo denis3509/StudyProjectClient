@@ -1,0 +1,7 @@
+export const SET_USER = 'SET_USER';
+export const REMOVE_USER = 'REMOVE_USER';
+export const SET_IS_AUTH = 'SET_IS_AUTH';
+
+export const SET_DASHBOARD_LIST = 'SET_DASHBOARD_LIST';
+export const SET_NOTIFICATIONS_LIST ='SET_NOTIFICATIONS_LIST';
+export const SET_PROFILE_DATA = 'SET_PROFILE_DATA';

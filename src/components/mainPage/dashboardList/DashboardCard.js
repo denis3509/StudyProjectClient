@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
+import { Link } from 'react-router-dom'
 const styles = {
   card: {
     maxWidth: 300,
@@ -22,7 +22,7 @@ const styles = {
 };
 
 function DashboardCard(props) {
-  const { classes,name,description, picture } = props;
+  const { classes,name,description, picture,id } = props;
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -44,7 +44,7 @@ function DashboardCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button component={Link} to={`/dashboard/:${id}`} size="small" color="primary">
           Открыть
         </Button>
 

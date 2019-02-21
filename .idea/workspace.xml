@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6500729e-3d90-48e4-b7b7-8972d5d7d3b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardCardList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardCardMini.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardColumn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Paper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mainPage/cardList/CardListContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mainPage/feed/Feed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mainPage/profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/network/serverObjects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/mainReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/mainPageActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mainPage/dashboardList/CardListContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/mainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/CardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/DashboardCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/LeftMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/LeftMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/mainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainPage/cardList/CardListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/coreActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/mainReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/mainReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,13 +24,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.537428">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainPage.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MainPage.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/mainPage/MainPage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="634">
+                <state relative-caret-position="986">
                   <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
@@ -48,59 +39,55 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
+          <file leaf-file-name="DashboardCard.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+                <state relative-caret-position="578">
+                  <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mainPage.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/reducers/mainPage.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mainReducer.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/reducers/mainReducer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="604">
+                  <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
                   <folding>
-                    <element signature="e#0#39#0" expanded="true" />
+                    <element signature="e#0#37#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mainReducer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/reducers/mainReducer.js">
+          <file leaf-file-name="actionTypes.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/constants/actionTypes.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file leaf-file-name="coreActions.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/actions/coreActions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="serverObjects.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/network/serverObjects.js">
+          <file leaf-file-name="mainPageActions.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/actions/mainPageActions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Feed.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/mainPage/feed/Feed.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardList.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="34" selection-start-line="34" selection-end-line="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/mainPage/profile/Profile.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                <state>
+                  <caret selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -108,15 +95,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="actionTypes.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/constants/actionTypes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="56" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="119">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
@@ -153,13 +137,20 @@
         <option value="$PROJECT_DIR$/src/components/dashboard/DashboardCardList.js" />
         <option value="$PROJECT_DIR$/src/components/profile/Profile.js" />
         <option value="$PROJECT_DIR$/src/components/mainPage/LeftMenu.js" />
-        <option value="$PROJECT_DIR$/src/reducers/mainReducer.js" />
         <option value="$PROJECT_DIR$/src/network/serverObjects.js" />
         <option value="$PROJECT_DIR$/src/components/mainPage/feed/Feed.js" />
         <option value="$PROJECT_DIR$/src/components/mainPage/cardList/CardListContainer.js" />
         <option value="$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/mainPage/MainPage.js" />
+        <option value="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js" />
+        <option value="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js" />
+        <option value="$PROJECT_DIR$/src/reducers/MainPage.js" />
+        <option value="$PROJECT_DIR$/src/actions/coreActions.js" />
+        <option value="$PROJECT_DIR$/src/actions/mainPageActions.js" />
+        <option value="$PROJECT_DIR$/src/constants/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/reducers/mainPage.js" />
+        <option value="$PROJECT_DIR$/src/reducers/mainReducer.js" />
       </list>
     </option>
   </component>
@@ -199,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,44 +207,12 @@
               <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
-              <item name="cardList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,25 +256,37 @@
       <workItem from="1550161079172" duration="1197000" />
       <workItem from="1550227182119" duration="2425000" />
       <workItem from="1550315989362" duration="1186000" />
-      <workItem from="1550405048696" duration="3116000" />
+      <workItem from="1550405048696" duration="4510000" />
+      <workItem from="1550488188950" duration="599000" />
+      <workItem from="1550564784926" duration="9275000" />
+      <workItem from="1550688257320" duration="1360000" />
+      <workItem from="1550758510075" duration="599000" />
     </task>
+    <task id="LOCAL-00001" summary="implement react router">
+      <created>1550408271162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550408271162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23377000" />
+    <option name="totallyTimeSpent" value="36604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17650159" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12486828" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015806" side_tool="true" weight="0.20152505" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49841937" visible="true" weight="0.20152505" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49841937" visible="true" weight="0.12309368" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -329,15 +301,15 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17650159" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49841937" visible="true" weight="0.20152505" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015806" side_tool="true" visible="true" weight="0.20152505" />
@@ -352,42 +324,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implement react router" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement react router" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/LeftMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/MainPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="23" lean-forward="true" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -418,7 +360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -477,7 +419,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -533,14 +475,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -568,14 +510,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
@@ -599,13 +541,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardCardMini.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/DashboardColumn.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -638,41 +573,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/DashboardCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/mainPage/feed/Feed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/CardListContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/CardListContainer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/mainReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="391">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/network/serverObjects.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/MainPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="986">
+          <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/cardList/CardList.js">
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -683,22 +617,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="651">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainPage/MainPage.js">
+    <entry file="file://$PROJECT_DIR$/src/network/serverObjects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/coreActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/mainPageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/actionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/mainPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/mainReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Grid from '@material-ui/core/Grid'
-import CardList from './cardList/CardList'
+import DashboardList from './dashboardList/DashboardList'
 import Typography from '@material-ui/core/Typography'
 import LeftMenu from './LeftMenu'
 import Feed from './feed/Feed'
@@ -56,8 +56,8 @@ class MainPage extends Component {
           />
         </Grid>
         <Grid item xs={9} key="2">
-          <Route exact path={`${match.url}/`} component={CardList}/>
-          <Route path={`${match.url}/dashboardList`} component = {CardList}/>
+          <Route exact path={`${match.url}/`} component={DashboardList}/>
+          <Route path={`${match.url}/dashboardList`} component = {DashboardList}/>
           <Route path={`${match.url}/feed`} component = {Feed}/>
           <Route path={`${match.url}/profile`} component = {Profile}/>
         </Grid>

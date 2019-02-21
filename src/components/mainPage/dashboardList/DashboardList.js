@@ -3,7 +3,7 @@ import DashboardCard from './DashboardCard'
 import Grid from '@material-ui/core/Grid'
 
 
-class CardList extends Component {
+class DashboardList extends Component {
   constructor(state) {
     super(state);
   }
@@ -14,16 +14,19 @@ class CardList extends Component {
     const dashboardList = [
       {
         name: "client",
+        id: 1,
         description: "",
         users: [],
       },
       {
         name: "server",
+        id : 2,
         description: "",
         users: [],
       },
       {
         name: "database",
+        id : 3,
         description: "",
         users: [],
       },
@@ -40,7 +43,7 @@ class CardList extends Component {
                 name={dashboardInfo.name}
                 description={dashboardInfo.description}
                 picture={dashboardInfo.picture}
-
+                id={dashboardInfo.id}
               /></Grid>)
         })}
       </Grid>
@@ -48,4 +51,4 @@ class CardList extends Component {
   }
 }
 
-export default CardList
+export default DashboardList
