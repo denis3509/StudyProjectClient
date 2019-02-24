@@ -1,54 +1,38 @@
 import React, {Component, Fragment} from 'react'
 import DashboardCard from './DashboardCard'
 import Grid from '@material-ui/core/Grid'
+import {connect} from 'react-redux'
+import {fetchDashboardList} from "../../../actions/mainPageActions";
 
-
-class DashboardList extends Component {
-  constructor(state) {
-    super(state);
-  }
-
-  render() {
-    //const {dashboardList} = this.props;
-
-    const dashboardList = [
+const DashboardList = ({items,fetchDashboardList}) => {
+  fetchDashboardList();
+  return (
+    <Grid container spacing={16}>
       {
-        name: "client",
-        id: 1,
-        description: "",
-        users: [],
-      },
-      {
-        name: "server",
-        id : 2,
-        description: "",
-        users: [],
-      },
-      {
-        name: "database",
-        id : 3,
-        description: "",
-        users: [],
-      },
-
-    ];
-    return (
-      <Grid container spacing={16}>
-        {
-
-          dashboardList.map((dashboardInfo) => {
+        items.map((dashboardInfo) => {
           return (
-            <Grid item direction="row"  >
+            <Grid item direction="row">
               <DashboardCard
+                key={dashboardInfo.id + 'dl'}
                 name={dashboardInfo.name}
                 description={dashboardInfo.description}
                 picture={dashboardInfo.picture}
                 id={dashboardInfo.id}
               /></Grid>)
         })}
-      </Grid>
-    )
-  }
-}
+    </Grid>
+  )
 
-export default DashboardList
+};
+const mapStateToProps = state => ({
+  items: state.mainPage.dashboardList.items,
+});
+const mapDispatchToProps= dispatch => ({
+  fetchDashboardList : ()=> dispatch(fetchDashboardList())
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DashboardList)
+
+

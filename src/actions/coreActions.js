@@ -1,4 +1,5 @@
 import * as types from '../constants/actionTypes'
+import {user} from '../constants/mainPage'
 
 export const setUser = (user) => {
   return {
@@ -19,3 +20,19 @@ export const removeUser = () =>{
     type: types.REMOVE_USER
   }
 };
+
+export const signIn = ({ login, pass }) => async (dispatch) => {
+  const logUser =  {
+    userName : user.userName,
+  };
+  dispatch(setUser(logUser));
+};
+
+export const logOut = () => async (dispatch) => {
+  dispatch(removeUser());
+  dispatch(setIsAuth(false));
+};
+
+export const fetchDashboardsRequest = () => {
+
+}

@@ -1,22 +1,42 @@
 import * as types from '../constants/actionTypes'
+import {user} from '../constants/mainPage'
 
-export const setColumnList = (columnList) => {
+
+export const requestDashboardList = () => {
  return {
-   type: types.SET_COLUMN_LIST,
-   columnList
+   type: types.REQUEST_DASHBOARD_LIST,
  }
 };
-export const setNotificationsList =(notificationsList)=> {
+
+export const invalidateDashboardList = () => {
   return {
-    type : types.SET_NOTIFICATIONS_LIST,
-    notificationsList
+    type : types.INVALIDATE_DASHBOARD_LIST
   }
 };
-export const setProfileData = (profileData) => {
+export const receiveDashboardList = (items) => {
   return {
-    type : types.SET_PROFILE_DATA,
-    profileData
+    type : types.RECEIVE_DASHBOARD_LIST,
+    items
   }
-
+};
+export const fetchDashboardList =() => {
+  return (dispatch) => {
+    dispatch(requestDashboardList());
+    dispatch(receiveDashboardList(user.dashboardList));
+  }
 };
 
+
+
+
+export const requestNotificationList = ()=>{
+  return {
+    type : types.REQUEST_NOTIFICATION_LIST
+  }
+};
+
+export const requestProfileData = () => {
+  return {
+    type : types.REQUEST_PROFILE_DATA
+  }
+};

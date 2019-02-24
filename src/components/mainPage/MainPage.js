@@ -41,13 +41,12 @@ const listItems = [
 
 
 
-class MainPage extends Component {
-  constructor(state) {
-    super(state);
-  }
+const MainPage  = (props) => {
 
-  render() {
-    const {match} = this.props;
+
+
+    const {match} =  props;
+
     return (
       <Grid container direction="row" justify="center"  spacing={16}>
         <Grid item xs={3} key="1" >
@@ -63,7 +62,7 @@ class MainPage extends Component {
         </Grid>
       </Grid>
     )
-  }
-}
+
+};
 
 export default MainPage

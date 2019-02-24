@@ -5,14 +5,14 @@ import MainPage from './components/mainPage/MainPage'
 import Dashboard from './components/dashboard/Dashboard'
 import Header from './components/header/Header'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-
+import configureStore from './configureStore'
 
 
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
-import mainReducer from './reducers/mainReducer'
+import rootReducer from './reducers/rootReducer'
 
-const store = createStore(mainReducer);
+const store = configureStore();
 
 class App extends Component {
   render() {
