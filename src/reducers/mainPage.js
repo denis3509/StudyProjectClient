@@ -33,10 +33,6 @@ const dashboardList = (state,action) =>{
 
 };
 
-
-
-
-
 export function mainPage(state = initialState, action) {
   switch (action.type) {
     case types.REQUEST_DASHBOARD_LIST :

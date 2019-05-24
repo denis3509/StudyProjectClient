@@ -1,36 +1,69 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Grid from '@material-ui/core/Grid'
-import DashboardColumn from './DashboardColumn'
+import Column from './Column'
+import {dashboardClient} from './../../constants/mainPage'
+import DashboardCardFull from './DashboardCardFull/DashboardCardFull'
 
-const columns = [1, 2, 3, 4]
+const Dashboard = () => {
 
+  const [currentCard, setCurrentCard] = useState(null);
+  const {columns} = dashboardClient;
 
-class Dashboard extends React.Component {
-  constructor(state) {
-    super(state);
-  }
+  const openCard = (columnIndex) => (cardIndex) => {
+    console.log("indexes: ", columnIndex + " " + cardIndex);
+    setCurrentCard(dashboardClient.columns[columnIndex].cards[cardIndex]);
+  };
 
-  render() {
-    return (
-      <Grid container spacing={0} direction="row">
+  const closeCard = () => {
+    setCurrentCard(null);
+  };
+
+  const handleAddNewCard = (columnIndex) => (cardName) => {
+
+  };
+
+  return (
+    <Grid container
+          spacing={8}
+          direction="row"
+
+    >
+      <Grid item
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="flex-start"
+            spacing={16}
+      >
+
         {
-          columns.map((column) => {
+          columns.map((column, columnIndex) => {
               return (
-                <Grid item xs={2}>
-                  <DashboardColumn/>
+                <Grid item>
+                  <Column
+                    column={column}
+                    openCard={openCard(columnIndex)}
+                    handleAddNewCard={handleAddNewCard(columnIndex)}
+                  />
                 </Grid>
               )
 
             }
           )
         }
-
-        }
-
       </Grid>
-    )
-  }
+      {currentCard && <Grid item>
+        <DashboardCardFull
+          currentCard={currentCard}
+          handleCloseCard={()=>closeCard()}
+        />
+      </Grid>
+      }
 
-}
+    </Grid>
+  )
+
+
+};
 
 export default Dashboard

@@ -2,8 +2,8 @@ export const user = {
   id: 1,
   userName: 'denis3509',
   login: 'denis',
-  password : 'pass',
-  profileData : {
+  password: 'pass',
+  profileData: {
     fullName: 'Денис Богатырев',
     about: 'учусь писать код',
     phone: '88001230987',
@@ -14,6 +14,7 @@ export const user = {
       id: 1,
       name: 'Client',
       description: 'учебный проект клиент',
+
     },
     {
       id: 2,
@@ -21,26 +22,44 @@ export const user = {
       description: 'учебный проект сервер',
     }
   ],
-  notificationList : [],
-  countNewNotifications :0,
+  notificationList: [],
+  countNewNotifications: 0,
 };
 
-export const dashboard_1 = {
+export const dashboardClient = {
   id: 1,
   name: 'Client',
   description: 'учебный проект клиент',
-  group : [{
+  group: [{
     id: 1,
     userName: 'denis3509',
   }],
-  columnList :[{
-    name : 'интерфейс',
-    cardList: [{
-      name: 'redux',
-      content : {
-        text : 'настроить redux',
-      }
-    }],
-  }],
+  columns: [
+    {
+      name: "Интерфейс",
+      cards: [
+
+        {
+          name: "drag n drop",
+          content: "выбор компонента"
+        },
+
+      ],
+    },
+    {
+      name: "Логика",
+      cards: [
+        {
+          name: "Авторизация",
+          content: "passport js"
+        },
+        {
+          name: "redux",
+          content : "redux-thunk"
+        }
+      ]
+    }
+
+  ],
 
 };
