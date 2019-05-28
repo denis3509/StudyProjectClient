@@ -1,26 +1,7 @@
 import React, {Fragment, useRef, useEffect} from 'react'
 import styled from 'styled-components'
 
-const groups = [
-  [
-    {
-      title: "Профиль",
-      component: "a"
 
-    },
-    {
-      title: "Доски",
-      component: "a"
-    }
-  ],
-  [
-    {
-      title: "Выйти",
-      component: "a",
-    }
-  ],
-
-];
 const Element = (props) => {
   const {component, title} = props;
   switch (component) {
@@ -52,7 +33,7 @@ const Group = (props) => {
 };
 
 const ContextMenuComponent = (props) => {
-  const {open, setOpen} = props;
+  const {open, setOpen, groups, title} = props;
 
   const node = useRef();
 
@@ -79,7 +60,7 @@ const ContextMenuComponent = (props) => {
 
     return (
       <S.MenuWrapper ref={node}>
-        <S.Title>Денис Богатырев</S.Title>
+        <S.Title>{title}</S.Title>
         {
           groups.map((group) => {
             return (
@@ -121,6 +102,7 @@ S.ElementButton = styled.button`
    line-height: 20px;
    font-weight: 400;
    padding-left : 20px;
+   background-color:  white;
   :hover {
     background-color: ${p => p.theme.color.menuItem};
     color : white;
@@ -153,8 +135,8 @@ S.Divider = styled.div`
 `;
 S.MenuWrapper = styled.div`
   z-index : 10;
-  right : 3px;
-  top: 43px;
+  left : 3px;
+  top: 3px;
   position : absolute;
   display : flex;
   flex-direction : column;
@@ -164,12 +146,14 @@ S.MenuWrapper = styled.div`
   border : 1px solid ${p => p.theme.color.divider} ;   
   box-shadow: 0 8px 16px -4px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
   padding : 10px 0px;
+  overflow: hidden;    
+  right: 3px;
 `;
 S.Title = styled.span`
     box-sizing: border-box;
     color: #6b778c;
     display: block;
-    line-height: 40px;
+    line-height: 32px;
     
     margin: 0 12px;
     overflow: hidden;

@@ -27,14 +27,43 @@ const ContainerDashboard = WrappedComponent => {
       const {dashboard_id} = this.props.match.params;
       this.props.dashboardActions.getDashboard(dashboard_id);
     }
-    updateDashboard  = (update) => {
+
+    updateDashboard = (update) => {
       const {dashboard_id} = this.props.match.params;
-      this.props.dashboardActions.updateDashboard(dashboard_id,update);
+      this.props.dashboardActions.updateDashboard(dashboard_id, update);
     };
+
+    newColumn = (columnName) => {
+      const {dashboard_id} = this.props.match.params;
+      this.props.dashboardActions.newColumn(dashboard_id, {columnName});
+    };
+
+    removeColumn = (column_id) => {
+      const {dashboard_id} = this.props.match.params;
+      this.props.dashboardActions.removeColumn(dashboard_id,column_id)
+    };
+
+    newCard = (column_id) => (cardName) => {
+      const {dashboard_id} = this.props.match.params;
+      this.props.dashboardActions.newCard(dashboard_id, column_id, {cardName});
+    };
+    updateCard = (column_id) => (card_id)=> update => {
+      const {dashboard_id} = this.props.match.params;
+      this.props.dashboardActions.newCard(dashboard_id, column_id, card_id, update);
+    };
+    removeCard = (column_id) => (card_id) => {
+      const {dashboard_id} = this.props.match.params;
+      this.props.dashboardActions.newCard(dashboard_id, column_id, card_id);
+    };
+
     render() {
-      console.log(this.props);
+
       return (
         <WrappedComponent
+          newColumn={this.newColumn}
+          newCard={this.newCard}
+          updateCard={this.updateCard}
+          removeCard={this.removeCard}
           updateDashboard={this.updateDashboard}
           {...this.props}/>
       )

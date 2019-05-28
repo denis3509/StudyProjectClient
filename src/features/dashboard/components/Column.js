@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import EditableNameColumn from './EditableNameColumn'
-import AddCard from "./AddCard";
+import NewCard from "./NewCard";
 import Card from './Card'
 import CardMini from "./CardMini";
+import ContextMenu from "../../../UI/menus/ContextMenu/ContextMenu";
 
 
 const Column = (props) => {
   const {cards, _id, columnName} = props.column;
-  const [openAddCard, setOpenAddCard] = useState(false);
+  const {newCard} = props;
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <S.Column>
       <S.ColumnHeader>
@@ -16,8 +18,16 @@ const Column = (props) => {
           name={columnName}
           setName={(name) => console.log('set column name:', name)}
         />
-        <S.MenuButton>
+        <S.MenuButton
+          onClick={() => setMenuOpen(true)}
+        >
           <i className="fas fa-ellipsis-h"/>
+          <ContextMenu
+            title={'Дейсвтия с колонкой'}
+            open={menuOpen}
+            setOpen={setMenuOpen}
+            groups={groups}
+          />
         </S.MenuButton>
       </S.ColumnHeader>
       <S.Cards>
@@ -33,14 +43,25 @@ const Column = (props) => {
           })
         }
       </S.Cards>
-      <AddCard
-        addCard={(name) => console.log(name)}
+      <NewCard
+        newCard={newCard(_id)}
       />
 
     </S.Column>
   )
 };
+const groups = [
+  [
+    {
+      title: "Удалить",
+      component: "button"
 
+    },
+
+  ],
+
+
+];
 
 const S = {};
 
@@ -52,6 +73,7 @@ S.Column = styled.div`
     box-sizing: border-box;
    width: 272px;
    padding : 0 8px 0 8px;
+   margin-right : 10px;
 `;
 S.ColumnHeader = styled.div`
   display : flex;

@@ -5,6 +5,26 @@ import HeaderButton from "../../../UI/buttons/HeaderButton";
 import NameButton from "../../../UI/buttons/NameButton";
 import ContextMenu from "../../../UI/menus/ContextMenu/ContextMenu";
 
+const groups = [
+  [
+    {
+      title: "Профиль",
+      component: "a"
+
+    },
+    {
+      title: "Доски",
+      component: "a"
+    }
+  ],
+  [
+    {
+      title: "Выйти",
+      component: "a",
+    }
+  ],
+
+];
 
 const Header = (props) => {
 
@@ -38,6 +58,7 @@ const Header = (props) => {
         <ContextMenu
           open={menuOpen}
           setOpen={setMenuOpen}
+          groups={groups}
         />
       </S.RightButtons>
     </S.Header>

@@ -185,7 +185,7 @@ export const removeColumn = (dashboard_id, column_id)=> async dispatch => {
 
 export const newCard = (dashboard_id,column_id,card_id,card)=> async dispatch => {
   dispatch({type: types.NEW_COLUMN_REQUEST});
-  api.newColumn(dashboard_id,column_id,card_id,card)
+  api.newCard(dashboard_id,column_id,card_id,card)
     .then((response) => {
       const {
         dashboardName,

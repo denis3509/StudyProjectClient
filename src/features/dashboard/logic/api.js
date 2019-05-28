@@ -14,10 +14,10 @@ const api = {
   updateColumn : (dashboard_id, column_id, update) => instance.put(`/dashboards/column?dashboard_id=${dashboard_id}&column_id=${column_id}`, {...update}),
   removeColumn : (dashboard_id, column_id ) => instance.delete(`/dashboards/column?dashboard_id=${dashboard_id}&column_id=${column_id}`),
 
-  getCard : (dashboard_id, column_id , card_id)=> instance.get(`/dashboards/column?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`),
-  newCard : (dashboard_id, column_id, card ) => instance.post(`/dashboards/column?dashboard_id=${dashboard_id}`, {...card}),
-  updateCard : (dashboard_id, column_id, card_id, update) => instance.put(`/dashboards/column?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`, {...update}),
-  removeCard : (dashboard_id, column_id, card_id ) => instance.delete(`/dashboards/column?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`),
+  getCard : (dashboard_id, column_id , card_id)=> instance.get(`/dashboards/card?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`),
+  newCard : (dashboard_id, column_id, card ) => instance.post(`/dashboards/card?dashboard_id=${dashboard_id}&column_id=${column_id}`, {...card}),
+  updateCard : (dashboard_id, column_id, card_id, update) => instance.put(`/dashboards/card?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`, {...update}),
+  removeCard : (dashboard_id, column_id, card_id ) => instance.delete(`/dashboards/card?dashboard_id=${dashboard_id}&column_id=${column_id}&card_id=${card_id}`),
 
 
 };

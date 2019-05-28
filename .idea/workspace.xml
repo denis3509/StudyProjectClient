@@ -2,71 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6500729e-3d90-48e4-b7b7-8972d5d7d3b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AddDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/buttons/HeaderButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/buttons/LoginButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/buttons/NameButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/inputs/EditableName.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/inputs/TextInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/modals/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/modals/ModalMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/system/LoadingOrError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardCardFull/DashboardCardFull.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/NewCardField.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/AddCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/CardMini.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/Column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/DashboardHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/EditableNameColumn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/containers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/logic/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/logic/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/logic/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dashboard/logic/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/header/containers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/components/dashboardList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/containers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/logic/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/logic/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/logic/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/mainPage/logic/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/containers/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/logic/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/logic/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/logic/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/logic/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/network/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dashboard/components/NewColumn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/mainPageActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/mainPageActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardCardList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardCardMini.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardCardMini.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardColumn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/header/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/LeftMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/mainPage/components/LeftMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/mainPage/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/dashboardList/CardListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/dashboardList/DashboardList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/feed/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/mainPage/components/feed/Feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPage/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/mainPage/components/profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/mainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/mainPage/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/mainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/mainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/components/AddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/components/NewCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/components/Column.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/components/Column.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/containers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/containers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/logic/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/logic/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dashboard/logic/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dashboard/logic/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/header/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/header/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,26 +27,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50031036">
+    <splitter split-orientation="horizontal" split-proportion="0.63004345">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Auth.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Auth.js">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+                <state relative-caret-position="429">
+                  <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
                   <folding>
-                    <element signature="e#0#47#0" expanded="true" />
+                    <element signature="e#0#25#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/features/mainPage/components/index.js">
+          <file leaf-file-name="Column.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/Column.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="35" selection-start-line="35" selection-end-line="35" />
+                <state relative-caret-position="272">
+                  <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -106,52 +54,22 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ModalMessage.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/UI/modals/ModalMessage.js">
+          <file leaf-file-name="EditableNameColumn.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/EditableNameColumn.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-102">
-                  <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+                <state relative-caret-position="17">
+                  <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/features/user/logic/reducer.js">
+          <file leaf-file-name="ContextMenu.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/features/user/logic/actions.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/api.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+                <state relative-caret-position="1160">
+                  <caret line="152" column="27" lean-forward="true" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
                   <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LoadingOrError.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/UI/system/LoadingOrError.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
+                    <element signature="e#0#56#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -161,11 +79,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Modal.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Modal.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/UI/modals/Modal.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="238">
                   <caret line="68" column="72" selection-start-line="68" selection-start-column="72" selection-end-line="68" selection-end-column="72" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NewCard.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/NewCard.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
                 </state>
               </provider>
             </entry>
@@ -195,19 +122,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/features/user/container/Login.js" />
-        <option value="$PROJECT_DIR$/src/UI/inputs/TextInput.js" />
-        <option value="$PROJECT_DIR$/src/UI/buttons/LoginButton.js" />
-        <option value="$PROJECT_DIR$/src/features/user/containers/Login.js" />
-        <option value="$PROJECT_DIR$/src/features/user/components/Login.js" />
         <option value="$PROJECT_DIR$/src/features/header/Header.js" />
         <option value="$PROJECT_DIR$/src/features/header/components.js" />
         <option value="$PROJECT_DIR$/src/features/header/containers/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/UI/buttons/HeaderButton.js" />
         <option value="$PROJECT_DIR$/src/UI/menus/ContextMenu.js" />
         <option value="$PROJECT_DIR$/src/UI/buttons/NameButton.js" />
-        <option value="$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js" />
         <option value="$PROJECT_DIR$/src/features/mainPage/containers/dashboardList/index.js" />
         <option value="$PROJECT_DIR$/src/features/mainPage/containers/index.js" />
         <option value="$PROJECT_DIR$/src/features/mainPage/components/LeftMenu.js" />
@@ -217,35 +137,42 @@
         <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/containers/Index.js" />
         <option value="$PROJECT_DIR$/src/features/mainPage/components/dashboardList/index.js" />
-        <option value="$PROJECT_DIR$/src/features/dashboard/containers/index.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/components/DashboardHeader.js" />
         <option value="$PROJECT_DIR$/src/UI/inputs/EditableName.js" />
         <option value="$PROJECT_DIR$/src/UI/inputs/EditableNameColumn.js" />
-        <option value="$PROJECT_DIR$/src/features/dashboard/components/index.js" />
         <option value="$PROJECT_DIR$/src/styles.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/components/Card.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/components/EditableNameColumn.js" />
-        <option value="$PROJECT_DIR$/src/features/dashboard/components/Column.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/components/CardMini.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/components/AddCard.js" />
         <option value="$PROJECT_DIR$/src/scripts.js" />
-        <option value="$PROJECT_DIR$/src/features/dashboard/logic/api.js" />
         <option value="$PROJECT_DIR$/scripts/constants.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/logic/constants.js" />
         <option value="$PROJECT_DIR$/src/features/dashboard/logic/reducer.js" />
         <option value="$PROJECT_DIR$/scripts/reducer.js" />
         <option value="$PROJECT_DIR$/src/UI/modals/modal.js" />
         <option value="$PROJECT_DIR$/src/features/mainPage/components/index.js" />
-        <option value="$PROJECT_DIR$/src/features/header/components/index.js" />
         <option value="$PROJECT_DIR$/src/AddDashboard.js" />
         <option value="$PROJECT_DIR$/src/UI/modals/Modal.js" />
         <option value="$PROJECT_DIR$/src/features/user/logic/constants.js" />
         <option value="$PROJECT_DIR$/src/features/user/logic/actions.js" />
         <option value="$PROJECT_DIR$/src/Auth.js" />
-        <option value="$PROJECT_DIR$/src/features/dashboard/logic/actions.js" />
         <option value="$PROJECT_DIR$/src/features/user/logic/reducer.js" />
         <option value="$PROJECT_DIR$/src/UI/modals/ModalMessage.js" />
         <option value="$PROJECT_DIR$/src/UI/system/LoadingOrError.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/components/AddColumn.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/components/index.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/components/NewColumn.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/logic/actions.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/logic/api.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/containers/index.js" />
+        <option value="$PROJECT_DIR$/src/features/header/components/index.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/components/Column.js" />
+        <option value="$PROJECT_DIR$/src/features/dashboard/components/NewCard.js" />
+        <option value="$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js" />
       </list>
     </option>
   </component>
@@ -350,46 +277,15 @@
               <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
@@ -402,7 +298,15 @@
               <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyProjectClient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyProjectClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+              <item name="ContextMenu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -502,7 +406,7 @@
       <workItem from="1558367256863" duration="5430000" />
       <workItem from="1558438290217" duration="5464000" />
       <workItem from="1558620604760" duration="3637000" />
-      <workItem from="1558689305554" duration="4299000" />
+      <workItem from="1558689305554" duration="13692000" />
     </task>
     <task id="LOCAL-00001" summary="implement react router">
       <created>1550408271162</created>
@@ -525,11 +429,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551031318180</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="alot">
+      <created>1558694063808</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558694063809</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184172000" />
+    <option name="totallyTimeSpent" value="193565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,7 +458,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1512118" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49683878" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51738673" side_tool="true" visible="true" weight="0.29520696" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51738673" side_tool="true" weight="0.29520696" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32897604" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.32897604" />
@@ -600,29 +511,15 @@
     <MESSAGE value="implement react router" />
     <MESSAGE value="reducer" />
     <MESSAGE value="reducer dashboardList" />
-    <option name="LAST_COMMIT_MESSAGE" value="reducer dashboardList" />
+    <MESSAGE value="alot" />
+    <option name="LAST_COMMIT_MESSAGE" value="alot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/features/mainPage/components/dashboardList/DashboardList.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Column.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -645,13 +542,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/features/header/components.js" />
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/buttons/HeaderButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -693,13 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -752,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/EditableNameColumn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/CardMini.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -766,34 +642,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/Column.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/Card.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/AddCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/DashboardHeader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -818,44 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/header/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,58 +701,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/mainPage/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/containers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#746#1300#0" />
-            <element signature="e#1376#1953#0" />
-            <element signature="e#2021#2429#0" />
-            <element signature="e#2501#3053#0" />
-            <element signature="e#3137#3712#0" />
-            <element signature="e#3788#4354#0" />
-            <element signature="e#4438#5006#0" />
-            <element signature="e#5096#5671#0" />
-            <element signature="e#5754#6321#0" />
           </folding>
         </state>
       </provider>
@@ -959,10 +734,169 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/system/LoadingOrError.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="323">
           <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1033">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="187" column="14" lean-forward="true" selection-start-line="187" selection-start-column="14" selection-end-line="187" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#127#684#0" />
+            <element signature="e#746#1300#0" />
+            <element signature="e#1376#1953#0" />
+            <element signature="e#2021#2429#0" />
+            <element signature="e#2501#3053#0" />
+            <element signature="e#3137#3712#0" />
+            <element signature="e#3788#4354#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/containers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/NewColumn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#4#26#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/logic/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="130" selection-start-line="17" selection-start-column="130" selection-end-line="17" selection-end-column="130" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/header/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="60" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/EditableNameColumn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/Column.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/dashboard/components/NewCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/menus/ContextMenu/ContextMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="152" column="27" lean-forward="true" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
