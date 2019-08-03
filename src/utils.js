@@ -7,3 +7,22 @@ export function createReducer(initialState, handlers) {
     }
   }
 }
+export function createDnD(columns) {
+
+   const columnsDnD =  columns.map( (column, index) => {
+    const cards = column.cards.map((card,index)=>{
+      return {
+        selected : false,
+        order : index,
+      }
+    });
+    return {
+      selected : false,
+      order : index,
+      cards : cards,
+    }
+  });
+  console.log(columnsDnD);
+  return columnsDnD;
+
+}

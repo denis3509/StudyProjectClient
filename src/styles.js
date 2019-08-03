@@ -15,6 +15,8 @@ const theme = {
     columnHover : '#c1c3c8',
     columnCard : '#fafbfc',
     columnCardHover : '#dbdcdd',
+    white1 : '#e6e6e6',
+    gray1 : '#f4f5f7',
   }
 };
 

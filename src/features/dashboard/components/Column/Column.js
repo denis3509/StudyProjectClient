@@ -2,15 +2,46 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import EditableNameColumn from './EditableNameColumn'
 import NewCard from "./NewCard";
-import Card from './Card'
-import CardMini from "./CardMini";
-import ContextMenu from "../../../UI/menus/ContextMenu/ContextMenu";
+
+import CardMini from "../Card/CardMini";
+import ContextMenu from "../../../../UI/menus/ContextMenu/ContextMenu";
 
 
 const Column = (props) => {
-  const {cards, _id, columnName} = props.column;
-  const {newCard} = props;
+  const {
+    cards,
+    _id,
+    columnName,
+    cardHeightDnD
+  } = props.column;
+  const {
+    dashboardActions,
+    cardActions
+  } = props;
   const [menuOpen, setMenuOpen] = useState(false);
+  const groups = [
+    [
+      {
+        title: "Удалить",
+        component: "button",
+        onClick: () => {
+          dashboardActions.removeColumn(_id)
+        }
+      },
+
+    ],
+  ];
+  const [state,updateState]= useState({
+    width: 0,
+    height : 0,
+    source : 0,
+    target : 0,
+  });
+
+  const setState = (newState)=> {
+    updateState(Object.assign({},state,newState));
+  };
+
   return (
     <S.Column>
       <S.ColumnHeader>
@@ -32,36 +63,26 @@ const Column = (props) => {
       </S.ColumnHeader>
       <S.Cards>
         {
-          cards.map((card) => {
-
+          cards.map((card, index) => {
             return (
               <CardMini
-                setCardName={(name) => console.log('set name: ', name)}
-                {...card}
+                card={card}
+                cardActions={cardActions}
+                dashboardActions={dashboardActions}
+                cardIndex={index}
               />
             )
           })
         }
       </S.Cards>
       <NewCard
-        newCard={newCard(_id)}
+        newCard={()=>cardActions.newCard(_id)}
       />
 
     </S.Column>
   )
 };
-const groups = [
-  [
-    {
-      title: "Удалить",
-      component: "button"
 
-    },
-
-  ],
-
-
-];
 
 const S = {};
 

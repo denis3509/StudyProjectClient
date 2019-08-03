@@ -3,7 +3,7 @@ import {Provider, connect} from 'react-redux'
 import withStyles from './styles'
 import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 
-import Dashboard from './components/dashboard/Dashboard'
+
 
 
 import configureStore from './configureStore'

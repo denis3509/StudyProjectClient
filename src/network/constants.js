@@ -1,4 +1,4 @@
-export const SERVER_URL = 'http://localhost:3001';
+export const SERVER_URL = 'http://localhost:3002';
 
 export const configAxios = {
   baseURL: SERVER_URL,

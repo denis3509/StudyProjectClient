@@ -1,4 +1,4 @@
-const constArray = ['dashboard', 'card', 'column'];
+const constArray = ['card'];
 constArray.forEach((constant) => {
   constant = constant.toUpperCase();
 

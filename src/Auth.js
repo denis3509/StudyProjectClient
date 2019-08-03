@@ -65,7 +65,8 @@ class Auth extends React.Component {
             />
             <Route exact path="/" render={() => <Redirect to="/home"/>}/>
             <Route path="/home" component={MainPage}/>
-            <Route path="/dashboard/:dashboard_id" component={Dashboard}/>
+            <Route  path="/dashboard/:dashboard_id"  component={Dashboard} />
+           <Route  path="/dashboard/:dashboard_id/card/:column_id/:card_id" component={Dashboard}/>
           </div>
         </Router>
       }

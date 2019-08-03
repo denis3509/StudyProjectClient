@@ -6,86 +6,80 @@ export const getDashboard = (dashboard_id) => async dispatch => {
   dispatch({type: types.GET_DASHBOARD_REQUEST});
   api.getDashboard(dashboard_id)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
-
-
       dispatch({
         type: types.GET_DASHBOARD_SUCCESS,
-        dashboardName,
-        description,
-        columns,
-      })
+        ...response.data,
+      });
+
     })
     .catch((error) => {
-      console.log(error.response);
-      dispatch ({
+      console.log('catch error getdash', error);
+      dispatch({
         type: types.GET_DASHBOARD_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
 
     })
 };
-export const newDashboard = (dashboard)=> async dispatch => {
+export const refreshDashboard = (dashboard_id) => async dispatch => {
+  api.getDashboard(dashboard_id)
+    .then((response) => {
+
+
+      dispatch({
+        type: types.GET_DASHBOARD_SUCCESS,
+        ...response.data,
+      })
+    })
+    .catch((error) => {
+
+
+    })
+}
+
+export const newDashboard = (dashboard) => async dispatch => {
   dispatch({type: types.NEW_DASHBOARD_REQUEST});
   api.newDashboard(dashboard)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
 
 
       dispatch({
         type: types.NEW_DASHBOARD_SUCCESS,
-        dashboardName,
-        description,
-        columns,
+        ...response.data,
       })
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.NEW_DASHBOARD_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
 
     })
 };
-export const updateDashboard = (dashboard_id, update)=> async dispatch => {
+export const updateDashboard = (dashboard_id, update) => async dispatch => {
   dispatch({type: types.UPDATE_DASHBOARD_REQUEST});
   api.updateDashboard(dashboard_id, update)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
 
 
       dispatch({
         type: types.UPDATE_DASHBOARD_SUCCESS,
-        dashboardName,
-        description,
-        columns,
+        ...response.data,
       })
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.UPDATE_DASHBOARD_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
 
     })
 };
-export const removeDashboard = (dashboard_id)=> async dispatch => {
+export const removeDashboard = (dashboard_id) => async dispatch => {
   dispatch({type: types.REMOVE_DASHBOARD_REQUEST});
-  api.removeDashboard(dashboard_id )
+  api.removeDashboard(dashboard_id)
     .then((response) => {
       dispatch({
         type: types.REMOVE_DASHBOARD_SUCCESS,
@@ -93,7 +87,7 @@ export const removeDashboard = (dashboard_id)=> async dispatch => {
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.REMOVE_DASHBOARD_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
@@ -102,80 +96,62 @@ export const removeDashboard = (dashboard_id)=> async dispatch => {
 };
 
 
-export const newColumn = (dashboard_id, column)=> async dispatch => {
+export const newColumn = (dashboard_id, column) => async dispatch => {
   dispatch({type: types.NEW_COLUMN_REQUEST});
-  api.newColumn(dashboard_id,column)
+  api.newColumn(dashboard_id, column)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
+
 
 
       dispatch({
         type: types.NEW_COLUMN_SUCCESS,
-        dashboardName,
-        description,
-        columns,
+        ...response.data,
       })
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.NEW_COLUMN_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
 
     })
 };
-export const updateColumn = (dashboard_id, column_id, update)=> async dispatch => {
+export const updateColumn = (dashboard_id, column_id, update) => async dispatch => {
   dispatch({type: types.UPDATE_COLUMN_REQUEST});
-  api.updateColumn(dashboard_id,column_id, update)
+  api.updateColumn(dashboard_id, column_id, update)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
+
 
 
       dispatch({
         type: types.UPDATE_COLUMN_SUCCESS,
-        dashboardName,
-        description,
-        columns,
+        ...response.data,
       })
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.UPDATE_COLUMN_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
 
     })
 };
-export const removeColumn = (dashboard_id, column_id)=> async dispatch => {
+export const removeColumn = (dashboard_id, column_id) => async dispatch => {
   dispatch({type: types.REMOVE_COLUMN_REQUEST});
   api.removeColumn(dashboard_id, column_id)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
+
 
       dispatch({
         type: types.REMOVE_COLUMN_SUCCESS,
-        dashboardName,
-        description,
-        columns
+        ...response.data,
       })
     })
     .catch((error) => {
       console.log(error.response);
-      dispatch ({
+      dispatch({
         type: types.REMOVE_COLUMN_FAILURE,
         error: error.response ? error.response.data.message : "error"
       });
@@ -183,83 +159,24 @@ export const removeColumn = (dashboard_id, column_id)=> async dispatch => {
     })
 };
 
-export const newCard = (dashboard_id,column_id,card_id,card)=> async dispatch => {
-  dispatch({type: types.NEW_COLUMN_REQUEST});
-  api.newCard(dashboard_id,column_id,card_id,card)
-    .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
-
-
-      dispatch({
-        type: types.NEW_COLUMN_SUCCESS,
-        dashboardName,
-        description,
-        columns,
-      })
-    })
-    .catch((error) => {
-      console.log(error.response);
-      dispatch ({
-        type: types.NEW_COLUMN_FAILURE,
-        error: error.response ? error.response.data.message : "error"
-      });
-
-    })
+export const setCardOpen = (dashboard_id, column_id, card_id) => {
+  return {
+    type: types.SET_CARD_OPEN,
+    dashboard_id,
+    column_id,
+    card_id,
+  }
 };
-export const updateCard = (dashboard_id, column_id, card_id,update)=> async dispatch => {
-  dispatch({type: types.UPDATE_CARD_REQUEST});
-  api.updateCard(dashboard_id,column_id, card_id,update)
-    .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
-
-
-      dispatch({
-        type: types.UPDATE_CARD_SUCCESS,
-        dashboardName,
-        description,
-        columns,
-      })
-    })
-    .catch((error) => {
-      console.log(error.response);
-      dispatch ({
-        type: types.UPDATE_CARD_FAILURE,
-        error: error.response ? error.response.data.message : "error"
-      });
-
-    })
+export const closeCardOpen = () => {
+  return {
+    type: types.CLOSE_CARD_OPEN,
+  }
 };
-export const removeCard = (dashboard_id, column_id, card_id)=> async dispatch => {
-  dispatch({type: types.REMOVE_CARD_REQUEST});
-  api.removeCard(dashboard_id, column_id, card_id)
-    .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
 
-      dispatch({
-        type: types.REMOVE_CARD_SUCCESS,
-        dashboardName,
-        description,
-        columns
-      })
-    })
-    .catch((error) => {
-      console.log(error.response);
-      dispatch ({
-        type: types.REMOVE_CARD_FAILURE,
-        error: error.response ? error.response.data.message : "error"
-      });
 
-    })
+export const setCardHeightDnD = (cardHeightDnD) => {
+  return {
+    type: types.SET_CARD_HEIGHT_DND,
+    cardHeightDnD
+  }
 };

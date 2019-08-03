@@ -24,7 +24,8 @@ const mainPage = createReducer(initialState, {
   [types.GET_USER_FAILURE]: (state,action) =>{
     console.log(action.type,action.error);
     return state;
-  }
+  },
+
 });
 
 

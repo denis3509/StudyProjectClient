@@ -1,22 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import LoadingOrError from "../../../UI/system/LoadingOrError";
 import DashboardHeader from './DashboardHeader'
-import Column from './Column'
-import NewColumn from './NewColumn'
-
+import Column from './Column/Column'
+import NewColumn from './Column/NewColumn'
+import CardFull from '../containers/СardFull'
+import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 
 const Dashboard = (props) => {
     const {
       dashboardName,
       error,
       isLoading,
-      columns
+      columns,
+      cardOpen,
+      cardActions,
+      dashboardActions,
     } = props;
-    const {
-      newColumn,
-      newCard
-    } = props;
+
 
     if (isLoading || error) return (
       <LoadingOrError
@@ -24,28 +25,39 @@ const Dashboard = (props) => {
         error={error}
         modalRedirect={"/home/dashboardList"}
       />
-    )
+    );
+
+
 
     return (
       <S.DashboardWrapper>
         <DashboardHeader
-          {...props}
+          dashboardName={dashboardName}
         />
         <S.ColumnWrapper>
           {
-            columns.map((column) => {
+            columns.map((column, index) => {
               return <Column
                 column={column}
-                newCard={newCard}
+                cardActions={cardActions}
+                dashboardActions={dashboardActions}
               />
             })
           }
           <NewColumn
-            newColumn={newColumn}/>
+            newColumn={dashboardActions.newColumn}
+          />
 
 
         </S.ColumnWrapper>
+        {Boolean(cardOpen) ?
+          <CardFull
+            cardOpen={cardOpen}
+            closeCardOpen={dashboardActions.closeCardOpen}
+            refreshDashboard={dashboardActions.refreshDashboard}
 
+          />
+          : null}
       </S.DashboardWrapper>
     )
   }

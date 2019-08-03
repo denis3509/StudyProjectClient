@@ -4,6 +4,7 @@ import {
   applyMiddleware,
   combineReducers
 } from 'redux'
+import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './features/user/logic/reducer'
 import dashboard from './features/dashboard/logic/reducer'
 
@@ -14,7 +15,9 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(
-  rootReducer,
+  rootReducer,composeWithDevTools(
   applyMiddleware(thunkMiddleware)
+  )
 );
+
 export default store;
