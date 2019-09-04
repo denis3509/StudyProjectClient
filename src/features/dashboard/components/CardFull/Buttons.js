@@ -3,13 +3,15 @@ import styled from 'styled-components'
 
 const Buttons = (props)=>{
   const {
-    removeCard
+    cardActions,
+    cardOpen
   } = props;
+  const {dashboard_id,column_id,card_id} = cardOpen;
 
   return (
     <S.Buttons>
       <S.Button
-        onClick={()=>removeCard()}
+        onClick={()=>cardActions.removeCard(dashboard_id,column_id,card_id)}
       >
         Удалить карточку
       </S.Button>

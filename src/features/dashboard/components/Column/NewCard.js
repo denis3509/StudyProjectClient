@@ -6,15 +6,19 @@ const NewCard = (props) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
-  const {newCard} = props;
+  const {
+    cardActions,
+    dashboard_id,
+    column_id,
+  } = props;
 
-  const handleOnKeyPress = (event)=> {
-    if(event.key==="Enter") {
+  const handleOnKeyPress = (event) => {
+    if (event.key === "Enter") {
       handleOnClick();
     }
   };
   const handleOnClick = () => {
-    newCard(value);
+    cardActions.newCard(dashboard_id,column_id,{cardName: value});
     setOpen(false);
     setValue("");
   };
@@ -25,7 +29,7 @@ const NewCard = (props) => {
         <S.TextArea
           onKeyDown={handleOnKeyPress}
           placeholder={"Введите имя карточки"}
-          onChange={(e)=>setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
         <S.AddButton
           onClick={handleOnClick}
@@ -37,7 +41,7 @@ const NewCard = (props) => {
   }
   return (
     <S.AddCardButton
-      onClick={()=>setOpen(true)}
+      onClick={() => setOpen(true)}
     >
       <S.Icon className={'fas fa-plus'}/> Добавить карточку
     </S.AddCardButton>

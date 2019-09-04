@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import LoadingOrError from "../../../UI/system/LoadingOrError";
-import DashboardHeader from './DashboardHeader'
+import DashboardHeader from './dashboardHeader/DashboardHeader'
 import Column from './Column/Column'
 import NewColumn from './Column/NewColumn'
 import CardFull from '../containers/СardFull'
 import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
+import TargetColumn from './Column/TargetColumn'
+import Chat from "../../chat/containers";
+import Modal from '../../../UI/modals/Modal'
 
 const Dashboard = (props) => {
     const {
@@ -16,6 +19,7 @@ const Dashboard = (props) => {
       cardOpen,
       cardActions,
       dashboardActions,
+      dashboard_id
     } = props;
 
 
@@ -28,36 +32,43 @@ const Dashboard = (props) => {
     );
 
 
-
     return (
       <S.DashboardWrapper>
         <DashboardHeader
-          dashboardName={dashboardName}
         />
         <S.ColumnWrapper>
           {
             columns.map((column, index) => {
-              return <Column
+              return (
+                <Column
+                key={column._id}
+                columnInd={index}
                 column={column}
+                dashboard_id={dashboard_id}
                 cardActions={cardActions}
                 dashboardActions={dashboardActions}
-              />
+
+              />)
+
             })
+
           }
           <NewColumn
-            newColumn={dashboardActions.newColumn}
+            dashboardActions={dashboardActions}
           />
 
 
         </S.ColumnWrapper>
         {Boolean(cardOpen) ?
           <CardFull
-            cardOpen={cardOpen}
             closeCardOpen={dashboardActions.closeCardOpen}
             refreshDashboard={dashboardActions.refreshDashboard}
+            dashboardActions={dashboardActions}
 
           />
           : null}
+        {dashboard_id && <Chat/>}
+
       </S.DashboardWrapper>
     )
   }

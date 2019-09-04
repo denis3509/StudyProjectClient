@@ -7,11 +7,12 @@ import {
 import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './features/user/logic/reducer'
 import dashboard from './features/dashboard/logic/reducer'
-
+import chat from './features/chat/logic/reducer'
 
 const rootReducer = combineReducers({
   user,
-  dashboard
+  dashboard,
+  chat
 });
 
 const store = createStore(

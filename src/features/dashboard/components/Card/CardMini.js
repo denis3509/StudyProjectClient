@@ -3,24 +3,22 @@ import styled from 'styled-components'
 import CardContextMenu from "./CardContextMenu";
 import BlackBackground from './BlackBackground'
 import CardFull from '../CardFull/CardFull'
-import Target from './Target'
+import Target from './TargetCard'
+import {connect} from 'react-redux'
 
 const CardMini = (props) => {
   const {
-    card,
+    cardName,
+    _id: card_id,
     column_id,
-    cardDnD,
-    cardHeightDnD
+    dashboard_id,
+    cardInd,
+    cardActions,
+    dashboardActions,
+    columnInd,
   } = props;
-  const {order} = {};
-  const {cardName, _id} = card;
-  const {
-    updateCard,
-    removeCard,
-    setCardOpen,
-    setCardHeightDnD,
-    dashboardActions
-  } = props;
+
+
 
   const [value, setValue] = useState(cardName);
   const [openContext, setOpenContext] = useState(false);
@@ -39,18 +37,24 @@ const CardMini = (props) => {
   };
 
   const handleSave = () => {
-    updateCard(_id)({cardName: value});
+    cardActions.updateCard(dashboard_id,column_id,card_id,{cardName: value});
     setOpenContext(false);
   };
   const handleDelete = () => {
-    removeCard(_id);
+    cardActions.removeCard(dashboard_id,column_id,card_id);
     setOpenContext(false);
   };
   const handleOnDragStart = (event) => {
-    event.dataTransfer.setData('text/plain', height + 'px');
 
     console.log('dragStart',ref.current.clientHeight);
-    setCardHeightDnD(ref.current.clientHeight);
+    dashboardActions.setCardDragSource(
+      ref.current.clientHeight,
+      dashboard_id,
+      card_id,
+      column_id,
+      columnInd,
+      cardInd,
+      );
     console.log(ref.current.clientHeight)
   };
   const handleOnDragEnd = (event) => {
@@ -59,12 +63,12 @@ const CardMini = (props) => {
   };
 
   return (
-    <Fragment>
+    <div>
       <S.CardMini
         ref={ref}
-        order={order}
+
         selected={selected}
-        onClick={() => setCardOpen(_id)}
+        onClick={() => dashboardActions.setCardOpen(dashboard_id,column_id,card_id)}
         draggable={"true"}
         onDragStart={handleOnDragStart}
         onDragEnd={handleOnDragEnd}
@@ -89,9 +93,13 @@ const CardMini = (props) => {
         <BlackBackground open={openContext}/>
       </S.CardMini>
       <Target
-        height={cardHeightDnD}
+        dashboardActions={dashboardActions}
+        columnInd={columnInd}
+        card_id={card_id}
+        cardInd={cardInd}
+        column_id={column_id}
       />
-    </Fragment>
+    </div>
   )
 
 };
@@ -139,7 +147,7 @@ S.TextArea = styled.textarea`
   position : relative;
   resize : none;
    
-`
+`;
 S.Title = styled.div`
   margin :0px;
   word-wrap: break-word;
@@ -168,5 +176,8 @@ S.SaveButton = styled.button`
     font-weight : bold;
     margin : 0px  0px 8px  0px;
     width : 150px;
-`
-export default CardMini
+`;
+const mapStateToProps = (state)=>({
+  dashboard_id: state.dashboard._id,
+});
+export default connect(mapStateToProps)(CardMini)

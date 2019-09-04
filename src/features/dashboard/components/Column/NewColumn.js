@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
-
+import {connect} from 'react-redux';
 
 const NewColumn = (props) => {
-  const {newColumn} = props;
+  const {
+    dashboardActions,
+    dashboard_id
+  } = props;
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
@@ -14,7 +17,7 @@ const NewColumn = (props) => {
     }
   };
   const handleOnClick = () => {
-    newColumn(value);
+    dashboardActions.newColumn(dashboard_id,{columnName:value});
     setOpen(false);
     setValue("");
   };
@@ -25,7 +28,7 @@ const NewColumn = (props) => {
         <S.TextArea
           onKeyDown={handleOnKeyPress}
           placeholder={"Введите имя колонки"}
-          onChange={(e)=>setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
         <S.AddButton
           onClick={handleOnClick}
@@ -104,4 +107,9 @@ S.AddButton = styled.button`
     margin : 0px 0px 8px 0px;
     width : 150px;
 `;
-export default NewColumn
+
+const mapStateToProps = (state) => ({
+  dashboard_id: state.dashboard._id,
+})
+
+export default connect(mapStateToProps)(NewColumn)

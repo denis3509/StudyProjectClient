@@ -15,13 +15,10 @@ const CardFull = (props) => {
     cardName,
     content,
     isLoading,
-    error
-  } = props;
+    error,
+    cardActions,
+    dashboardActions,
 
-  const {
-    closeCardOpen,
-    updateCard,
-    removeCard
   } = props;
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -36,7 +33,7 @@ const CardFull = (props) => {
       return;
     }
     // outside click
-    closeCardOpen();
+    dashboardActions.closeCardOpen();
   };
   const handleResize = () => {
     setWindowHeight(window.innerHeight);
@@ -68,11 +65,12 @@ const CardFull = (props) => {
       <S.CardFullWrapper ref={node}>
         <S.Top>
           <EditableName
+            cardOpen={cardOpen}
             cardName={cardName}
-            updateCard={updateCard}
+            cardActions={cardActions}
           />
           <S.Icon
-            onClick={()=>closeCardOpen()}
+            onClick={()=>dashboardActions.closeCardOpen()}
             className="fas fa-times"/>
         </S.Top>
 
@@ -84,7 +82,8 @@ const CardFull = (props) => {
           </S.Main>
           <S.Right>
             <Buttons
-              removeCard={removeCard}
+              cardOpen={cardOpen}
+              cardActions={cardActions}
             />
           </S.Right>
         </S.Bottom>

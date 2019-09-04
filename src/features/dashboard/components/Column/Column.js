@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import styled from 'styled-components'
 import EditableNameColumn from './EditableNameColumn'
 import NewCard from "./NewCard";
-
+import TargetColumn from './TargetColumn'
 import CardMini from "../Card/CardMini";
 import ContextMenu from "../../../../UI/menus/ContextMenu/ContextMenu";
 
@@ -10,14 +10,17 @@ import ContextMenu from "../../../../UI/menus/ContextMenu/ContextMenu";
 const Column = (props) => {
   const {
     cards,
-    _id,
+    _id: column_id,
     columnName,
     cardHeightDnD
   } = props.column;
   const {
+    dashboard_id,
     dashboardActions,
-    cardActions
+    cardActions,
+    columnInd,
   } = props;
+  const ref = useRef();
   const [menuOpen, setMenuOpen] = useState(false);
   const groups = [
     [
@@ -25,67 +28,85 @@ const Column = (props) => {
         title: "Удалить",
         component: "button",
         onClick: () => {
-          dashboardActions.removeColumn(_id)
+          dashboardActions.removeColumn(dashboard_id, column_id)
         }
       },
 
     ],
   ];
-  const [state,updateState]= useState({
-    width: 0,
-    height : 0,
-    source : 0,
-    target : 0,
-  });
-
-  const setState = (newState)=> {
-    updateState(Object.assign({},state,newState));
+  const handleOnDragStart = () => {
+    dashboardActions.setColumnDragSource(
+      ref.current.clientHeight,
+      dashboard_id,
+      column_id,
+      columnInd,
+    )
   };
 
-  return (
-    <S.Column>
-      <S.ColumnHeader>
-        <EditableNameColumn
-          name={columnName}
-          setName={(name) => console.log('set column name:', name)}
-        />
-        <S.MenuButton
-          onClick={() => setMenuOpen(true)}
-        >
-          <i className="fas fa-ellipsis-h"/>
-          <ContextMenu
-            title={'Дейсвтия с колонкой'}
-            open={menuOpen}
-            setOpen={setMenuOpen}
-            groups={groups}
+  return (<S.Wrapper>
+      <S.Column
+        ref={ref}
+        draggable={true}
+        onDragStart={handleOnDragStart}
+      >
+        <S.ColumnHeader>
+          <EditableNameColumn
+            name={columnName}
+            setName={(name) => console.log('set column name:', name)}
           />
-        </S.MenuButton>
-      </S.ColumnHeader>
-      <S.Cards>
-        {
-          cards.map((card, index) => {
-            return (
-              <CardMini
-                card={card}
-                cardActions={cardActions}
-                dashboardActions={dashboardActions}
-                cardIndex={index}
-              />
-            )
-          })
-        }
-      </S.Cards>
-      <NewCard
-        newCard={()=>cardActions.newCard(_id)}
-      />
+          <S.MenuButton
+            onClick={() => setMenuOpen(true)}
+          >
+            <i className="fas fa-ellipsis-h"/>
+            <ContextMenu
+              title={'Дейсвтия с колонкой'}
+              open={menuOpen}
+              setOpen={setMenuOpen}
+              groups={groups}
+            />
+          </S.MenuButton>
+        </S.ColumnHeader>
+        <S.Cards>
 
-    </S.Column>
+          {
+            cards.map((card, index) => {
+              return (
+                <CardMini
+                  key={card._id}
+                  {...card}
+                  column_id={column_id}
+                  cardInd={index}
+                  columnInd={columnInd}
+                  cardActions={cardActions}
+                  dashboardActions={dashboardActions}
+                />
+              )
+            })
+          }
+        </S.Cards>
+
+        <NewCard
+          dashboard_id={dashboard_id}
+          column_id={column_id}
+          cardActions={cardActions}
+        />
+
+      </S.Column>
+      <TargetColumn
+        columnInd={columnInd}
+        column_id={column_id}
+        dashboardActions={dashboardActions}
+      />
+    </S.Wrapper>
   )
 };
 
 
 const S = {};
-
+S.Wrapper = styled.div`
+display: flex;
+flex-direction: row;
+`
 S.Column = styled.div`
   display : flex;
   flex-direction: column;

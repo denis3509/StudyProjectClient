@@ -14,8 +14,8 @@ const cardFullReducer = createReducer(initialState, {
     return Object.assign({}, state, {isLoading: true})
   },
   [types.GET_CARD_SUCCESS]: (state, action) => {
-    const {cardName, content} = action;
-    return Object.assign({}, state, {cardName, content, isLoading: false, error: null});
+
+    return Object.assign({}, state, {...action.data, isLoading: false, error: null});
   },
   [types.GET_CARD_FAILURE]: (state, action) => {
     const error = {action};

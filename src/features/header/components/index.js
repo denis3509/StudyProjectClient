@@ -37,17 +37,19 @@ const Header = (props) => {
     <S.Header
     >
       <S.LeftButtons>
-        <HeaderButton>
-          <S.Icon className={'fas fa-home'}/>
+        <HeaderButton
+
+        >
+          <a href={'/home/dashboardList'}><S.Icon className={'fas fa-home'}/></a>
         </HeaderButton>
         <HeaderButton>
-          <S.Icon className={'fas fa-columns'}/>
-          Доски
+          <a href={'/home/dashboardList'}> <S.Icon className={'fas fa-columns'}/>
+            Доски</a>
         </HeaderButton>
       </S.LeftButtons>
       <S.RightButtons>
         <HeaderButton
-          onClick={()=>setOpenModal(true)}
+          onClick={() => setOpenModal(true)}
         >
           <S.Icon className={'fas fa-plus'}/>
         </HeaderButton>
@@ -56,6 +58,7 @@ const Header = (props) => {
           onClick={() => setMenuOpen(!menuOpen)}
         />
         <ContextMenu
+          title={'Денис Богатырев'}
           open={menuOpen}
           setOpen={setMenuOpen}
           groups={groups}

@@ -5,6 +5,7 @@ import Dashboard from '../components'
 import * as dashboardActions from '../logic/actions'
 import * as cardActions from '../logic/cardFull/cardFullActions'
 
+
 const mapStateToProps = (state) => {
   const {
     dashboardName,
@@ -14,13 +15,18 @@ const mapStateToProps = (state) => {
     error,
     isLoading,
     columnsDnD,
+    _id,
   } = state.dashboard;
-  return {dashboardName, description, columns, error, isLoading, cardOpen, columnsDnD}
+  return {
+    dashboardName,
+    description, columns, error, isLoading, cardOpen, columnsDnD,dashboard_id : _id
+  }
 };
 
 const mapDispatchToProps = (dispatch) => ({
   dashboardActions: bindActionCreators(dashboardActions, dispatch),
-  cardActions: bindActionCreators(cardActions, dispatch)
+  cardActions: bindActionCreators(cardActions, dispatch),
+
 });
 
 
@@ -36,7 +42,7 @@ const ContainerDashboard = WrappedComponent => {
       const {dashboard_id} = this.props.match.params;
       this.props.dashboardActions.getDashboard(dashboard_id);
     };
-    refreshDashboard = ()=> {
+    refreshDashboard = () => {
       const {dashboard_id} = this.props.match.params;
       this.props.dashboardActions.refreshDashboard(dashboard_id);
     };
@@ -74,17 +80,16 @@ const ContainerDashboard = WrappedComponent => {
       const {dashboard_id} = this.props.match.params;
       this.props.cardActions.removeCard(dashboard_id, column_id, card_id);
     };
-    setCardOpen =   (column_id) => card_id => {
+    setCardOpen = (column_id) => card_id => {
       const {dashboard_id} = this.props.match.params;
-      this.props.dashboardActions.setCardOpen(dashboard_id,column_id,card_id);
+      this.props.dashboardActions.setCardOpen(dashboard_id, column_id, card_id);
     };
-    closeCardOpen = ()=> {
+    closeCardOpen = () => {
       this.props.dashboardActions.closeCardOpen();
     };
-    selectCard = (columnInd)=> (cardInd) => () => {
-      this.props.dashboardActions.selectCard(columnInd,cardInd);
+    selectCard = (columnInd) => (cardInd) => () => {
+      this.props.dashboardActions.selectCard(columnInd, cardInd);
     };
-
 
 
     render() {
@@ -92,7 +97,9 @@ const ContainerDashboard = WrappedComponent => {
 
       return (
         <WrappedComponent
-          {...this.props}/>
+          {...this.props}
+
+        />
       )
     }
   }

@@ -29,7 +29,7 @@ const ModalMessage = (props) => {
   };
   const handleClose = ()=>{
     closeModal();
-    console.log('modal close, modal redirect: ', modalRedirect)
+    console.log('modal close, modal redirect: ', modalRedirect);
     if (modalRedirect) {
       console.log('modal redirect', modalRedirect);
       document.location.href = modalRedirect;
@@ -57,14 +57,11 @@ const ModalMessage = (props) => {
 };
 
 const S = {};
-S.Background = styled.div`
-background-color: white;
-border-radius: 3px;
-box-shadow: 0 8px 16px -4px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
-padding : 10px;
-display : flex;
-flex-direction : column;
-min-width : 200px;
+S.Wrapper = styled.div`
+width : 300px;
+height : 100px;
+background : ${p => p.theme.color.card};
+border-radius : 5px;
 `;
 S.Message = styled.span`
   line-height :  24px;

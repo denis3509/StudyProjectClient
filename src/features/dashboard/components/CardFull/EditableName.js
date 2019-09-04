@@ -2,19 +2,20 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 
-
 const EditableName = (props) => {
 
-  const {cardName} = props;
-
-  const {updateCard} = props;
+  const {
+    cardName,
+    cardOpen,
+    cardActions
+  } = props;
+  const {dashboard_id,column_id,card_id} = cardOpen;
 
   const [value, setValue] = useState(cardName);
 
 
-
   const handleOnBlur = (event) => {
-    updateCard({cardName : event.target.value})
+    cardActions.updateCard(dashboard_id,column_id,card_id,{cardName: event.target.value})
   };
   const handleOnChange = (event) => {
     setValue(event.target.value);

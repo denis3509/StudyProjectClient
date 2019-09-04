@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
   content: state.dashboard.card.content,
   isLoading : state.dashboard.card.isLoading,
   error : state.dashboard.card.error,
+  cardOpen : state.dashboard.cardOpen,
 });
 const mapDispatchToProps = dispatch => ({
   cardActions: bindActionCreators(cardActions, dispatch),
@@ -36,7 +37,7 @@ const ContainerCardFull = WrappedComponent => {
       const {dashboard_id, column_id , card_id} = this.props.cardOpen;
       this.props.cardActions.updateCard(dashboard_id, column_id  , card_id, update)
         .then((result)=>{
-           this.props.refreshDashboard();
+           this.props.dashboardActions.refreshDashboard(dashboard_id);
         })
         .catch((error)=>{
           console.log('error', error);
@@ -49,8 +50,7 @@ const ContainerCardFull = WrappedComponent => {
 
       return (
         <WrappedComponent
-          updateCard={this.updateCard}
-          removeCard={this.removeCard}
+
           {...this.props}
         />
       )

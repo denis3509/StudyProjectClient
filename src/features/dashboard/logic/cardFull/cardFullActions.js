@@ -6,18 +6,11 @@ export const newCard = (dashboard_id, column_id, card) => async dispatch => {
   console.log('card full new card', card);
   api.newCard(dashboard_id, column_id, card)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
 
 
       dispatch({
         type: types.NEW_CARD_SUCCESS,
-        dashboardName,
-        description,
-        columns,
+        data: {...response.data},
       })
     })
     .catch((error) => {
@@ -35,16 +28,10 @@ export const updateCard = (dashboard_id, column_id, card_id, update) => async di
     api.updateCard(dashboard_id, column_id, card_id, update)
       .then((response) => {
         console.log('res update card: ', response);
-        const {
-          dashboardName,
-          description,
-          columns,
-        } = response.data;
+
         dispatch({
           type: types.UPDATE_CARD_SUCCESS,
-          dashboardName,
-          description,
-          columns,
+          data: {...response.data},
         });
         resolve('updated')
 
@@ -65,17 +52,11 @@ export const removeCard = (dashboard_id, column_id, card_id) => async dispatch =
   dispatch({type: types.REMOVE_CARD_REQUEST});
   api.removeCard(dashboard_id, column_id, card_id)
     .then((response) => {
-      const {
-        dashboardName,
-        description,
-        columns
-      } = response.data;
+
 
       dispatch({
         type: types.REMOVE_CARD_SUCCESS,
-        dashboardName,
-        description,
-        columns
+        data: {...response.data},
       })
     })
     .catch((error) => {
@@ -92,15 +73,11 @@ export const getCard = (dashboard_id, column_id, card_id) => async dispatch => {
   console.log('get card request');
   api.getCard(dashboard_id, column_id, card_id)
     .then((response) => {
-      const {
-        cardName,
-        content
-      } = response.data;
+
 
       dispatch({
         type: types.GET_CARD_SUCCESS,
-        cardName,
-        content
+        data: {...response.data},
       });
       console.log('get card success')
     })

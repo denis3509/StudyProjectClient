@@ -82,10 +82,11 @@ const ContextMenu = (props) => {
   const {open, setOpen} = props;
 
 
-
   return (
-    <S.Container>
-      {open && <ContextMenuComponent   {...props}/>}
+    <S.Container >
+      {open && <ContextMenuComponent
+
+        {...props}/>}
     </S.Container>
   )
 
@@ -135,7 +136,8 @@ S.Divider = styled.div`
 `;
 S.MenuWrapper = styled.div`
   z-index : 10;
-  left : 3px;
+  margin-right : 10px;
+  right : 3px;
   top: 3px;
   position : absolute;
   display : flex;
@@ -147,7 +149,7 @@ S.MenuWrapper = styled.div`
   box-shadow: 0 8px 16px -4px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
   padding : 10px 0px;
   overflow: hidden;    
-  right: 3px;
+ 
 `;
 S.Title = styled.span`
     box-sizing: border-box;

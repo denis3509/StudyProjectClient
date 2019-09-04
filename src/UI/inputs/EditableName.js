@@ -12,6 +12,10 @@ const EditableName = (props) => {
       setEdit(false);
     }
   };
+  const handleOnBlur = () =>{
+    setName(value);
+    setEdit(false);
+  };
 
 
   if (edit) {
@@ -21,6 +25,8 @@ const EditableName = (props) => {
         value={value}
         onChange={(event)=>setValue(event.target.value)}
         onKeyPress={handleKeyPress}
+        onBlur={handleOnBlur}
+        autofocus
       />
     )
   }

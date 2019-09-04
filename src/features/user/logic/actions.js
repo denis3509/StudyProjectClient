@@ -1,12 +1,12 @@
 import * as types from './constants'
-import user from './api'
+import api from './api'
 import {LOGIN_FAILURE} from "./constants";
 
 export const getUser = (user_id = '5ccc292aacf40b1114bd7d6c') => async dispatch => {
   dispatch({
     type: types.GET_USER_REQUEST,
   });
-  user.getUser(user_id)
+  api.getUser(user_id)
     .then((res) => {
       dispatch({
         type: types.GET_USER_SUCCESS,
@@ -21,23 +21,29 @@ export const getUser = (user_id = '5ccc292aacf40b1114bd7d6c') => async dispatch 
     });
 };
 
-export const signUp = (userName, login, password, email) => {
-  user.signUp(userName, login, password, email)
-    .then((res) => {
-      console.log('signUp res:', res)
+export const signUp = (userName, login, password, passwordConfirm, email) => async dispatch => {
+  api.signUp(userName, login, password, passwordConfirm, email)
+    .then((response) => {
+      dispatch({
+        type : types.SIGN_UP_SUCCESS,
+        data : response.data
+      })
     })
     .catch((error) => {
-      console.log('signUp error', error);
+      console.log(error.response);
+      dispatch({
+        type : types.SIGN_UP_FAILURE,
+        error : error.response.data.message,
+      })
     })
 };
 export const login = (login, password) => async dispatch => {
-  user.login(login, password)
+  api.login(login, password)
     .then((response) => {
-      const {userName, dashboardList} = response.data;
+
       dispatch({
         type: types.LOGIN_SUCCESS,
-        userName,
-        dashboardList,
+        data:  response.data
       });
       console.log('login res:', response)
     })
