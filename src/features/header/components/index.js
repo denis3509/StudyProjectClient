@@ -5,34 +5,41 @@ import HeaderButton from "../../../UI/buttons/HeaderButton";
 import NameButton from "../../../UI/buttons/NameButton";
 import ContextMenu from "../../../UI/menus/ContextMenu/ContextMenu";
 
-const groups = [
-  [
-    {
-      title: "Профиль",
-      component: "a"
 
-    },
-    {
-      title: "Доски",
-      component: "a"
-    }
-  ],
-  [
-    {
-      title: "Выйти",
-      component: "a",
-    }
-  ],
-
-];
 
 const Header = (props) => {
 
-  const {userName} = props;
+  const {userName, userActions} = props;
   const {setOpenModal} = props;
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleLogout = ()=>{
+    userActions.logout();
+    document.location.href = '/home/dashboardList'
+  };
+  const groups = [
+    [
+      {
+        title: "Профиль",
+        component: "a"
+
+      },
+      {
+        title: "Доски",
+        component: "a"
+      }
+    ],
+    [
+      {
+        title: "Выйти",
+        component: "button",
+        onClick: handleLogout,
+
+      }
+    ],
+
+  ];
   return (
     <S.Header
     >
@@ -42,10 +49,10 @@ const Header = (props) => {
         >
           <a href={'/home/dashboardList'}><S.Icon className={'fas fa-home'}/></a>
         </HeaderButton>
-        <HeaderButton>
-          <a href={'/home/dashboardList'}> <S.Icon className={'fas fa-columns'}/>
-            Доски</a>
-        </HeaderButton>
+        <a href={'/home/dashboardList'}> <HeaderButton>
+          <S.Icon className={'fas fa-columns'}/>
+            Доски
+        </HeaderButton></a>
       </S.LeftButtons>
       <S.RightButtons>
         <HeaderButton

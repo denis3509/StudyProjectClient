@@ -7,7 +7,8 @@ const EditableName = (props) => {
   const {
     cardName,
     cardOpen,
-    cardActions
+    cardActions,
+    dashboardActions,
   } = props;
   const {dashboard_id,column_id,card_id} = cardOpen;
 
@@ -16,6 +17,9 @@ const EditableName = (props) => {
 
   const handleOnBlur = (event) => {
     cardActions.updateCard(dashboard_id,column_id,card_id,{cardName: event.target.value})
+      .then(res=>{
+        dashboardActions.refreshDashboard(cardOpen.dashboard_id)
+      })
   };
   const handleOnChange = (event) => {
     setValue(event.target.value);

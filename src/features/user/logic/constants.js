@@ -6,7 +6,8 @@ export const LOGIN_FAILURE ='LOGIN_FAILURE';
 export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
 export const SIGN_UP_FAILURE ='SIGN_UP_FAILURE';
 
-export const LOG_OUT = 'LOG_OUT';
+export const LOG_OUT_SUCCESS = 'LOG_OUT_SUCCESS';
+export const LOG_OUT_FAILURE = 'LOGOUT_FAIlURE';
 
 export const GET_USER_REQUEST = 'GET_USER_REQUEST';
 export const GET_USER_SUCCESS = 'GET_USER_SUCCESS';

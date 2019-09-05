@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 const AddDashboard = (props) => {
-  const [value,setValue] = useState("");
+  const [value,setValue] = useState("Новая доска");
   const {newDashboard} = props;
   return (
     <S.Wrapper>

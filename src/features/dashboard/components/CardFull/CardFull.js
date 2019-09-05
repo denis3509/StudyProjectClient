@@ -68,8 +68,10 @@ const CardFull = (props) => {
             cardOpen={cardOpen}
             cardName={cardName}
             cardActions={cardActions}
+            dashboardActions={dashboardActions}
           />
           <S.Icon
+            style= {{marginLeft : 'auto'}}
             onClick={()=>dashboardActions.closeCardOpen()}
             className="fas fa-times"/>
         </S.Top>
@@ -77,13 +79,17 @@ const CardFull = (props) => {
         <S.Bottom>
           <S.Main>
             <CardFullContent
+              cardActions ={cardActions}
               content={content}
+              cardOpen={cardOpen}
+              dashboardActions={dashboardActions}
             />
           </S.Main>
           <S.Right>
             <Buttons
               cardOpen={cardOpen}
               cardActions={cardActions}
+              dashboardActions={dashboardActions}
             />
           </S.Right>
         </S.Bottom>

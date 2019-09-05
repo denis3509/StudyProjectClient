@@ -42,7 +42,7 @@ const ModalMessage = (props) => {
       open={open}
       setOpen={setOpen}
       opacity={0}>
-      <S.Background>
+      <S.Wrapper>
         <S.Message>
           {modalMessage}
         </S.Message>
@@ -51,7 +51,7 @@ const ModalMessage = (props) => {
         >
           ОК
         </S.Button>
-      </S.Background>
+      </S.Wrapper>
     </Modal>
   )
 };

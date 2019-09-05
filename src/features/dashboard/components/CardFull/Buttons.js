@@ -4,14 +4,18 @@ import styled from 'styled-components'
 const Buttons = (props)=>{
   const {
     cardActions,
-    cardOpen
+    cardOpen,
+    dashboardActions,
   } = props;
   const {dashboard_id,column_id,card_id} = cardOpen;
-
+  const handleDelete = ()=> {
+    cardActions.removeCard(dashboard_id,column_id,card_id);
+    dashboardActions.closeCardOpen();
+  };
   return (
     <S.Buttons>
       <S.Button
-        onClick={()=>cardActions.removeCard(dashboard_id,column_id,card_id)}
+        onClick={handleDelete}
       >
         Удалить карточку
       </S.Button>

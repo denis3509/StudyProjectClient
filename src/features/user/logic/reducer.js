@@ -60,6 +60,9 @@ const user = createReducer(initialState, {
     const {error} = action;
 
     return Object.assign({}, state , {error});
+  },
+  [types.LOG_OUT_SUCCESS] : (state,action) => {
+    return initialState;
   }
 
 

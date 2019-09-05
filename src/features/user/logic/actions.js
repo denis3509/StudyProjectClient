@@ -25,15 +25,15 @@ export const signUp = (userName, login, password, passwordConfirm, email) => asy
   api.signUp(userName, login, password, passwordConfirm, email)
     .then((response) => {
       dispatch({
-        type : types.SIGN_UP_SUCCESS,
-        data : response.data
+        type: types.SIGN_UP_SUCCESS,
+        data: response.data
       })
     })
     .catch((error) => {
       console.log(error.response);
       dispatch({
-        type : types.SIGN_UP_FAILURE,
-        error : error.response.data.message,
+        type: types.SIGN_UP_FAILURE,
+        error: error.response.data.message,
       })
     })
 };
@@ -43,29 +43,44 @@ export const login = (login, password) => async dispatch => {
 
       dispatch({
         type: types.LOGIN_SUCCESS,
-        data:  response.data
+        data: response.data
       });
       console.log('login res:', response)
     })
     .catch((error) => {
       dispatch({
         type: LOGIN_FAILURE,
-        error: error.response? error.response.data.message : 'connection error'
+        error: error.response ? error.response.data.message : 'connection error'
       });
 
     })
 };
 
-export const openModal=(modalMessage, modalRedirect)=>{
+export const logout = () => async dispatch => {
+  api.logout()
+    .then(res => (
+      dispatch({
+        type: types.LOGIN_SUCCESS
+      })
+    ))
+    .catch((error) => {
+      dispatch({
+        type: types.LOG_OUT_FAILURE,
+      })
+    })
+}
+
+
+export const openModal = (modalMessage, modalRedirect) => {
   return {
-    type : types.OPEN_MODAL,
+    type: types.OPEN_MODAL,
     modalMessage,
     modalRedirect,
   }
 };
 
-export const closeModal=()=>{
+export const closeModal = () => {
   return {
-    type : types.CLOSE_MODAL,
+    type: types.CLOSE_MODAL,
   }
 };

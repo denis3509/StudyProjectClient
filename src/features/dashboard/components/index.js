@@ -64,6 +64,7 @@ const Dashboard = (props) => {
             closeCardOpen={dashboardActions.closeCardOpen}
             refreshDashboard={dashboardActions.refreshDashboard}
             dashboardActions={dashboardActions}
+            cardActions={cardActions}
 
           />
           : null}

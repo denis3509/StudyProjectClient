@@ -9,7 +9,7 @@ const mapStateToProps = (state)=>({
 });
 
 const mapDispatchToProps = (dispatch)=> ({
-  usersActions : bindActionCreators(usersActions, dispatch),
+  userActions : bindActionCreators(usersActions, dispatch),
 });
 
 const HeaderContainer = (WrappedComponent) => {

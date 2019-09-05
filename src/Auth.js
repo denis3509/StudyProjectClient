@@ -15,6 +15,7 @@ import ModalMessage from "./UI/modals/ModalMessage";
 
 
 const mapStateToProps = (state) => ({
+
   userName: state.user.userName,
   isLoading: state.user.isLoading,
 });

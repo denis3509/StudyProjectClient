@@ -2,21 +2,36 @@ import React, {useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
 
 const CardFullContent = (props) => {
-  const {content} = props;
-  const {updateCard} = props;
+  const {
+    content,
+    cardOpen,
+    cardActions,
+    dashboardActions,
+  } = props;
 
-  const handleOnBlur = (event) => {
-    updateCard({content: event.target.value})
+  const [value, setValue] = useState(content);
+  const handleOnBlur = () => {
+    cardActions.updateCard(cardOpen.dashboard_id, cardOpen.column_id, cardOpen.card_id, {content: value})
+      .then(res => {
+        dashboardActions.refreshDashboard(cardOpen.dashboard_id);
+      })
   };
+
+  const handleOnChange = (e) => {
+    setValue(e.target.value)
+  };
+
   return (
     <S.WrapperContent>
       <S.Title>Описание</S.Title>
-      {content ?
-        <S.Content
-          onBlur={handleOnBlur}
-          value={content}
-        />
-        : <S.Empty/>}
+
+      <S.Content
+        placeholder="Введите описание"
+        onBlur={handleOnBlur}
+        value={value}
+        onChange={handleOnChange}
+      />
+
     </S.WrapperContent>
   )
 
@@ -24,9 +39,10 @@ const CardFullContent = (props) => {
 
 const S = {};
 S.WrapperContent = styled.div`
-display : none;  
+  display : flex;
 flex-direction : column;
 align-items : flex-start;
+justify-content : flex-start;
 `;
 S.Title = styled.div`
   font-size: 16px;
@@ -35,27 +51,20 @@ S.Title = styled.div`
   color: ${p => p.theme.color.darkBlue};
   margin-bottom : 10px;
 `;
-S.Empty = styled.div`
-border-radius : 3px;
-padding : 10px;
-background : ${p => p.theme.color.column};
- :hover {
-  background : ${p => p.theme.color.columnHover};
- }  
-`;
+
 S.Content = styled.textarea`
 overflow: hidden;
     overflow-wrap: break-word;
-    height: 33px;
+     
     background: transparent;
     border-radius: 3px;
     box-shadow: none;
-    font-size: 20px;
-    font-weight: 600;
-     width: 100%;
+    font-size: 16px;
+     
+     width: 90%;
     line-height: 24px;
     margin: -4px -8px;
-    min-height: 75px;
+    min-height: 50px;
     padding: 4px 8px;
     resize: none;
     border: none;
