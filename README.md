@@ -9,7 +9,7 @@
 - перемещать их при помощи Drag'n'Drop;
 - общаться в командном чате.
 
-Для запуска введите в терминале npm install, затем npm start, также для сервера. Для работы приложения нужна mongoDB. Гугл хром не хранит куки для localhost, поэтому его нужно запускать с помощью команды chrome.exe --disable-web-security --user-data-dir="c:/chromedev"
+Для запуска введите в терминале npm install, затем npm start, также для сервера. Для работы приложения нужна mongoDB. Гугл хром не хранит куки для localhost, поэтому его нужно запускать с помощью команды chrome.exe --disable-web-security --user-data-dir="c:/chromedev". Для входа на сайт нужна регистрация
 
 ссылка на репозиторий с сервером: https://github.com/denis3509/StudyProjectServer
 
