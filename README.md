@@ -11,6 +11,8 @@
 
 Для запуска введите в терминале npm install, затем npm start, также для сервера. Для работы приложения нужна mongoDB. Гугл хром не хранит куки для localhost, поэтому его нужно запускать с помощью команды chrome.exe --disable-web-security --user-data-dir="c:/chromedev"
 
+ссылка на репозиторий с сервером: https://github.com/denis3509/StudyProjectServer
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
