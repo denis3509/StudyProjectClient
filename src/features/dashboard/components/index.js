@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import LoadingOrError from "../../../UI/system/LoadingOrError";
 import DashboardHeader from './dashboardHeader/DashboardHeader'
-import Column from './Column/Column'
+import Column from './Column'
 import NewColumn from './Column/NewColumn'
 import CardFull from '../containers/СardFull'
 import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
@@ -11,6 +11,7 @@ import Chat from "../../chat/containers";
 import Modal from '../../../UI/modals/Modal'
 import withScroll from '../../../UI/HOCs/withScroll'
 import {compose} from 'redux'
+
 const Dashboard = (props) => {
     const {
       dashboardName,
@@ -108,7 +109,6 @@ S.ColumnsContainer =  styled.div`
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.69);
- 
   border-radius: 24px;
 }
  

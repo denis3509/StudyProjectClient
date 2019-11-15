@@ -57,6 +57,7 @@ S.TargetColumn = styled.div`
  border-radius : 3px;
   display : block;
  margin : 0px -2px;
+ align-self: ${p=>p.over ? 'flex-start' : 'stretch' };
 `;
 const mapStateToProps = (state) => ({
   dashboard_id: state.dashboard_id,
