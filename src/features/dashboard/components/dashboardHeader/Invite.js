@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import api from '../../logic/api'
 
 const Invite = (props) => {
-  const {inviteUser,
+  const {
+    inviteUser,
     setOpen,
     dashboard_id,
   }

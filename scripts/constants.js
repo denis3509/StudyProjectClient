@@ -1,4 +1,4 @@
-const constArray = ['card'];
+const constArray = ['user', 'link', 'table'];
 
 constArray.forEach((constant)=>{
   constant = constant.toUpperCase();
@@ -20,4 +20,4 @@ constArray.forEach((constant)=>{
   console.log('export const REMOVE_'+constant+"_FAILURE = 'REMOVE_"+constant+"_FAILURE';");
   console.log();
 
-})
+});

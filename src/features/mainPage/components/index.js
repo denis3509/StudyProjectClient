@@ -16,47 +16,34 @@ const MainPage = (props) => {
 
 
   return (
-    <S.Wrapper>
-      <S.Left>
-        <LeftMenu
-          match={match}
+    <div className="main-page">
+      <div className="left">
+        <LeftMenu className="left-menu"
+                  match={match}
         />
-      </S.Left>
-      <S.Center>
-        <Route exact path={`${match.url}/`}
-               render={() => <Redirect to={`${match.url}/dashboardList`}/>}/>
+      </div>
+      <div className="center">
+          <Route exact path={`${match.url}/`}
+                 render={() => <Redirect to={`${match.url}/dashboardList`}/>}/>
 
-        <Route exact path={`${match.url}/dashboardList`}
-               render={(props) => <DashboardList {...props} dashboardList={dashboardList}/>}/>
-        <Route path={`${match.url}/feed`} component={Feed}/>
-        <Route path={`${match.url}/profile`} component={Profile}/>
-      </S.Center>
-      <S.Right>
-      </S.Right>
+          <Route exact path={`${match.url}/dashboardList`}
+                 render={(props) => <DashboardList {...props} dashboardList={dashboardList}/>}/>
+          <Route path={`${match.url}/feed`} component={Feed}/>
+          <Route path={`${match.url}/profile`} component={Profile}/>
+      </div>
+      <div className="right">
+      </div>
 
-    </S.Wrapper>
+    </div>
   )
 
 };
 const S = {};
 S.Wrapper = styled.div`
 margin-top : 30px;
-display : flex;
-flex-direction : row;
-`
-S.Left = styled.div`
-display : flex;
-flex :3;
-justify-content : flex-end;
+ 
 `;
-S.Center = styled.div`
-display : flex;
-flex :4;
-justify-content: flex-start;
-`;
-S.Right = styled.div`
-display : flex;
-flex :2;
-`
+
+
 
 export default MainPage

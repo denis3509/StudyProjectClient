@@ -84,6 +84,7 @@ padding : 4px;
 top : 0;
 background-color: ${p => p.theme.color.header};
  display : flex;
+ flex-wrap : wrap;
   
 `;
 S.LeftButtons = styled.div`
@@ -95,7 +96,7 @@ S.RightButtons = styled.div`
     flex :1;
     display : flex;
   justify-content: flex-end;
-`
+`;
 S.Icon = styled.i`
  margin-right :3px;
  margin-left :3px;

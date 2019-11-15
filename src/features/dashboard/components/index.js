@@ -9,7 +9,8 @@ import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 import TargetColumn from './Column/TargetColumn'
 import Chat from "../../chat/containers";
 import Modal from '../../../UI/modals/Modal'
-
+import withScroll from '../../../UI/HOCs/withScroll'
+import {compose} from 'redux'
 const Dashboard = (props) => {
     const {
       dashboardName,
@@ -33,22 +34,24 @@ const Dashboard = (props) => {
 
 
     return (
-      <S.DashboardWrapper>
+      <S.Dashboard>
         <DashboardHeader
+          dashboardActions={dashboardActions}
+
         />
-        <S.ColumnWrapper>
+        <S.ColumnsContainer>
           {
             columns.map((column, index) => {
               return (
                 <Column
-                key={column._id}
-                columnInd={index}
-                column={column}
-                dashboard_id={dashboard_id}
-                cardActions={cardActions}
-                dashboardActions={dashboardActions}
+                  key={column._id}
+                  columnInd={index}
+                  column={column}
+                  dashboard_id={dashboard_id}
+                  cardActions={cardActions}
+                  dashboardActions={dashboardActions}
 
-              />)
+                />)
 
             })
 
@@ -58,7 +61,7 @@ const Dashboard = (props) => {
           />
 
 
-        </S.ColumnWrapper>
+        </S.ColumnsContainer>
         {Boolean(cardOpen) ?
           <CardFull
             closeCardOpen={dashboardActions.closeCardOpen}
@@ -70,21 +73,55 @@ const Dashboard = (props) => {
           : null}
         {dashboard_id && <Chat/>}
 
-      </S.DashboardWrapper>
+      </S.Dashboard>
     )
   }
 ;
-export default Dashboard
+export default withScroll(Dashboard)
+
 const S = {};
-S.DashboardWrapper = styled.div`
+S.Dashboard = styled.div`
   display : flex;
   flex-direction : column;
   background-color: ${p => p.theme.color.card};
-  height : 100%
+  height : 100%;
+  width : 100%;
+ padding-bottom : 5px;
 `;
-S.ColumnWrapper = styled.div`
+S.ColumnsContainer =  styled.div`
   display : flex;
   flex-direction : row;
-  margin : 10px;
+  padding-left :10px;
+  
  align-items : flex-start;
-`;
+ overflow-x: auto;
+  overflow-y: hidden;
+  flex-grow :1;
+ 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-button {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.69);
+ 
+  border-radius: 24px;
+}
+ 
+ 
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.16);
+  
+  border-radius: 24px;
+}
+ 
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+ 
+
+` ;

@@ -2,15 +2,24 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 const EditableName = (props) => {
-  const { name, setName} = props;
-  const [edit,setEdit] = useState(false);
-  const [value,setValue]= useState(name);
+  const {
+    name,
+    dashboard_id,
+    column_id,
+    dashboardActions
+  } = props;
+  const [edit, setEdit] = useState(false);
+  const [value, setValue] = useState(name);
 
   const handleKeyPress = (event) => {
-    if (event.key==='Enter') {
-      setName(value);
+    if (event.key === 'Enter') {
+      dashboardActions.updateColumn(dashboard_id,column_id,{columnName:event.target.value});
       setEdit(false);
     }
+  };
+  const handleOnBlur = (event) => {
+    dashboardActions.updateColumn(dashboard_id,column_id,{columnName:event.target.value});
+    setEdit(false);
   };
 
 
@@ -19,12 +28,13 @@ const EditableName = (props) => {
       <S.Input
         {...props}
         value={value}
-        onChange={(event)=>setValue(event.target.value)}
+        onChange={(event) => setValue(event.target.value)}
         onKeyPress={handleKeyPress}
+        onBlur={handleOnBlur}
       />
     )
   }
-  return <S.Name onClick={()=>setEdit(true)} {...props}>{name}</S.Name>
+  return <S.Name onClick={() => setEdit(true)} {...props}>{name}</S.Name>
 };
 
 const S = {};
@@ -46,7 +56,7 @@ S.Name = styled.button`
     box-shadow: none;
     font-weight: 700;
    
-   color: ${p=>p.theme.color.darkBlue};
+   color: ${p => p.theme.color.darkBlue};
    margin: 0 4px 0 4px;
     
    font-size: 18px;

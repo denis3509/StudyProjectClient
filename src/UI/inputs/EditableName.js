@@ -2,19 +2,20 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 const EditableName = (props) => {
-  const { name, setName} = props;
+  const { name, dashboardActions,dashboard_id} = props;
   const [edit,setEdit] = useState(false);
   const [value,setValue]= useState(name);
 
   const handleKeyPress = (event) => {
     if (event.key==='Enter') {
-      setName(value);
+      dashboardActions.updateDashboard(dashboard_id,{dashboardName:value});
       setEdit(false);
     }
   };
-  const handleOnBlur = () =>{
-    setName(value);
+  const handleOnBlur = async ()   =>{
     setEdit(false);
+    await dashboardActions.updateDashboard(dashboard_id,{dashboardName:value});
+    dashboardActions.refreshDashboard(dashboard_id);
   };
 
 

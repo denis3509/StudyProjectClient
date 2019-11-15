@@ -52,7 +52,9 @@ const Column = (props) => {
         <S.ColumnHeader>
           <EditableNameColumn
             name={columnName}
-            setName={(name) => console.log('set column name:', name)}
+            dashboardActions={dashboardActions}
+            dashboard_id={dashboard_id}
+            column_id={column_id}
           />
           <S.MenuButton
             onClick={() => setMenuOpen(true)}

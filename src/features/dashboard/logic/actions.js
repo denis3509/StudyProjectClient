@@ -13,7 +13,7 @@ export const getDashboard = (dashboard_id) => async dispatch => {
 
     })
     .catch((error) => {
-      console.log('catch error getdash', error);
+
       dispatch({
         type: types.GET_DASHBOARD_FAILURE,
         error: error.response ? error.response.data.message : "error"

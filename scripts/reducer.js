@@ -1,4 +1,5 @@
-const constArray = ['card'];
+const constArray = ['user', 'link', 'table'];
+
 constArray.forEach((constant) => {
   constant = constant.toUpperCase();
 

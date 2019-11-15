@@ -3,38 +3,38 @@ import styled from 'styled-components'
 
 
 const Card = (props) => {
-  const {
-    dashboardName,
-    dashboard_id
-  } = props;
-  return (
-    <S.Card href={/dashboard/ + dashboard_id}>
-      <S.CardTitle>
-        {dashboardName}
-      </S.CardTitle>
-    </S.Card>
-  )
+    const {
+        dashboardName,
+        dashboard_id
+    } = props;
+    return (
+        <S.Card href={/dashboard/ + dashboard_id}>
+            <S.CardTitle>
+                {dashboardName}
+            </S.CardTitle>
+        </S.Card>
+    )
 };
 
 const DashboardList = (props) => {
-  const {dashboardList} = props;
+    const {dashboardList} = props;
 
-  return (
-    <S.Wrapper>
-      <S.Title>
-        Доски
-      </S.Title>
-      <S.CardContainer>
-        {dashboardList.map((dashboard) => {
-          return <Card {...dashboard}/>
-        })}
-      </S.CardContainer>
-    </S.Wrapper>
-  )
+    return (
+        <S.DashboardList>
+            <S.Title>
+                Доски
+            </S.Title>
+            <S.CardContainer>
+                {dashboardList.map((dashboard) => {
+                    return <Card {...dashboard}/>
+                })}
+            </S.CardContainer>
+        </S.DashboardList>
+    )
 };
 const S = {};
 
-S.Wrapper = styled.div`
+S.DashboardList = styled.div`
 display : flex;
 padding-left : 30px;
 flex-direction : column;
@@ -47,13 +47,16 @@ S.Title = styled.span`
     font-size: 16px;
     font-weight: 700;
     text-align : left;
+    padding : 10px;
 `;
 S.CardContainer = styled.div`
-  margin-top :10px;
   display : grid;
-  width : 100%;
-  grid-template-columns: repeat(auto-fill, 196px);
-  grid-gap: 10px;
+  grid-template-columns: repeat( auto-fit, minmax(170px, 230px));
+  grid-gap : 20px;
+  padding : 10px;
+  @media(max-width:710px) { 
+   grid-template-columns: repeat( auto-fit, minmax(170px, 1fr));
+  }
 `;
 S.Card = styled.a`
     color: #fff;
@@ -66,7 +69,7 @@ S.Card = styled.a`
       cursor : pointer;
       background-color: ${p => p.theme.color.cardHover};
     }
-    max-width : 196px ;
+     max-width : 300px ;
     height: 96px;
     border-radius: 3px;
        

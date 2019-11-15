@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import Login from "./features/user/containers/Login";
-import store from "./store";
 import Dashboard from "./features/dashboard/containers";
 import MainPage from "./features/mainPage/containers";
 import Header from './features/header/containers'

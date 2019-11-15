@@ -8,16 +8,17 @@ import {connect} from 'react-redux';
 import api from '../../logic/api'
 
 const DashboardHeader = (props) => {
-  const {dashboardName, dashboard_id} = props;
+  const {dashboardName, dashboard_id, dashboardActions} = props;
 
   const [openInvite, setOpenInvite] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
 
   return (
-    <S.HeaderWrapper>
+    <S.DashboardHeader>
       <EditableName
+        dashboard_id={dashboard_id}
         name={dashboardName}
-        setName={(name) => console.log(name)}
+        dashboardActions={dashboardActions}
       />
       <S.Divider/>
       <S.Button
@@ -44,18 +45,19 @@ const DashboardHeader = (props) => {
       <S.ButtonRight
         onClick={()=>setOpenDelete(true)}
       >Удалить доску</S.ButtonRight>
-    </S.HeaderWrapper>
+    </S.DashboardHeader>
   )
 };
 
 const S = {};
-S.HeaderWrapper = styled.div`
+S.DashboardHeader = styled.div`
 width: 100%;
  
 background-color: ${p => p.theme.color.card};
 display :  flex;  
  
 flex-direction : row;
+flex-wrap : wrap;
 padding : 4px;
 `;
 S.Button = styled.button`

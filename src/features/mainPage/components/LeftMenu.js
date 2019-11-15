@@ -20,7 +20,7 @@ const LeftMenu = (props) => {
   const {match} = props;
   console.log(match);
   return (
-    <S.MenuWrapper>
+    <S.LeftMenu>
       {
         menuItems.map((item) => {
           return <S.MenuItem  href={item.href}>
@@ -28,21 +28,25 @@ const LeftMenu = (props) => {
           </S.MenuItem>
         })
       }
-    </S.MenuWrapper>
+    </S.LeftMenu>
   )
 
 };
 
 const S = {};
-S.MenuWrapper = styled.div`
+S.LeftMenu = styled.div`
   display : flex;
   flex-direction : column;
   width : 150px;
+  @media (max-width : 710px) { 
+  flex-direction : row;
+  justify-content : space-around;
+  }
 `;
 S.MenuItem = styled.a`
   text-align : left;
   padding : 0 10px;
- font-weight: 700;
+  font-weight: 700;
   color: ${p => p.theme.color.darkBlue};
   border-radius: 4px;
   background-color : ${p => p.selected ? p.theme.color.selectedMenuItem : ""};

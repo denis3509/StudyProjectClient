@@ -30,3 +30,37 @@
     transform: rotate(360deg);
   }
 }
+
+.main-page {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1
+
+}
+
+.center {
+  flex: 2;
+}
+
+
+
+@media (max-width: 710px) {
+  .main-page {
+    flex-direction: column;
+  }
+
+  .left  {
+    order: 2;
+    justify-content : space-around;
+  }
+
+  .center {
+    order: 1;
+  }
+}
