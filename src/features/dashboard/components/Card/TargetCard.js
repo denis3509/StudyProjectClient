@@ -74,8 +74,8 @@ S.Target = styled.div`
  height : ${p => p.over ? p.height + 'px' : 4 + 'px'};
  background :${p => p.over ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)' } ;
  border-radius : 3px;
-  display : block;
- margin : -2px 0;
+display : block;
+ 
 `;
 
 export default connect(mapStateToProps)(TargetCard)
