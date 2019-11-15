@@ -64,7 +64,7 @@ S.NewColumn = styled.button`
     :hover{
     background-color: rgba(0,0,0,.30);
     }
-    width: 272px;
+    min-width: 272px;
     min-height : 32px;
      border-radius : 3px;
      text-align : left;

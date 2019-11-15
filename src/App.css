@@ -48,16 +48,14 @@
   flex: 2;
 }
 
-
-
 @media (max-width: 710px) {
   .main-page {
     flex-direction: column;
   }
 
-  .left  {
+  .left {
     order: 2;
-    justify-content : space-around;
+    justify-content: space-around;
   }
 
   .center {

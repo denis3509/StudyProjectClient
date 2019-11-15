@@ -150,7 +150,7 @@ S.Cards = styled.div`
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-   
+ 
 }
 ::-webkit-scrollbar-button {
   width: 4px;
