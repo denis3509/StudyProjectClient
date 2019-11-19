@@ -2,11 +2,11 @@ import React, {Fragment, useState, useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import {connect} from 'react-redux'
 import EditableName_old from './EditableName_old'
-import CardFullContent from './CardFullContent'
+import Description from './Description'
 import EditableName from "./EditableName";
 import LoadingOrError from "../../../../UI/system/LoadingOrError";
 import Buttons from './Buttons';
-
+import CheckList from './CheckList'
 
 const CardFull = (props) => {
 
@@ -50,19 +50,19 @@ const CardFull = (props) => {
   }, []);
   if (isLoading || error) return (
     <S.ModalBackground height={windowHeight}>
-      <S.CardFullWrapper ref={node}>
+      <S.CardFull ref={node}>
         <LoadingOrError
           isLoading={isLoading}
           error={error}
 
         />
-      </S.CardFullWrapper>
+      </S.CardFull>
     </S.ModalBackground>
   );
 
   return (
     <S.ModalBackground height={windowHeight}>
-      <S.CardFullWrapper ref={node}>
+      <S.CardFull ref={node}>
         <S.Top>
           <EditableName
             cardOpen={cardOpen}
@@ -76,14 +76,16 @@ const CardFull = (props) => {
             className="fas fa-times"/>
         </S.Top>
 
-        <S.Bottom>
+        <S.Center>
           <S.Main>
-            <CardFullContent
+            <Description
               cardActions ={cardActions}
               content={content}
               cardOpen={cardOpen}
               dashboardActions={dashboardActions}
             />
+            <CheckList/>
+
           </S.Main>
           <S.Right>
             <Buttons
@@ -92,8 +94,8 @@ const CardFull = (props) => {
               dashboardActions={dashboardActions}
             />
           </S.Right>
-        </S.Bottom>
-      </S.CardFullWrapper>
+        </S.Center>
+      </S.CardFull>
     </S.ModalBackground>
 
   );
@@ -113,7 +115,7 @@ S.ModalBackground = styled.div`
   position: fixed;
   z-index:10;
 `;
-S.CardFullWrapper = styled.div`
+S.CardFull = styled.div`
  width : 768px;
  min-height : 600px;
  padding : 20px;
@@ -126,8 +128,9 @@ S.CardFullWrapper = styled.div`
 `;
 S.Main = styled.div`
   display : flex;
-  flex: 2;
+  flex: 3;
   flex-direction : column;
+  padding-right : 10px;
 `;
 S.Right = styled.div`
  display : flex;
@@ -138,14 +141,15 @@ S.Top = styled.div`
 display : flex;
 flex-direction : row;
 justify-content : stretch;
-`
-S.Bottom = styled.div`
+`;
+S.Center = styled.div`
  display : flex;
  flex-direction : row;
-`
-S.Container = styled.div`
- 
+ @media (max-width : 550px) {
+  flex-direction : column;
+ }
 `;
+
 S.Icon = styled.i`
  margin : 1px;
  height: 33px;
@@ -154,7 +158,7 @@ S.Icon = styled.i`
     :hover {
     cursor : pointer;
     }
-`
+`;
 
 
 export default CardFull;

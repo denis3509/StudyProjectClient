@@ -17,6 +17,8 @@ const theme = {
     columnCardHover : '#dbdcdd',
     white1 : '#e6e6e6',
     gray1 : '#f4f5f7',
+    progressGreen : '#61bd4f',
+    progressBlue : '#5ba4cf',
   }
 };
 

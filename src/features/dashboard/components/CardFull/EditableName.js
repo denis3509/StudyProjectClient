@@ -26,7 +26,7 @@ const EditableName = (props) => {
   };
 
   return (
-    <S.Wrapper>
+    <S.EditableName>
       <S.Icon className="fas fa-digital-tachograph"/>
       <S.TextArea
         onBlur={handleOnBlur}
@@ -34,7 +34,7 @@ const EditableName = (props) => {
         value={value}
       />
 
-    </S.Wrapper>
+    </S.EditableName>
   )
 };
 
@@ -69,7 +69,7 @@ S.TextArea = styled.textarea`
     }
  `;
 
-S.Wrapper = styled.div`
+S.EditableName = styled.div`
 display : flex;
 flex-direction : row;
  margin-bottom : 20px;

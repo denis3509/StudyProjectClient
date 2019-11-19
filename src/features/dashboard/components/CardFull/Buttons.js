@@ -1,42 +1,73 @@
 import React from 'react'
 import styled from 'styled-components'
+import SimpleButton from "../../../../UI/buttons/SimpleButton";
 
-const Buttons = (props)=>{
+const Buttons = (props) => {
   const {
     cardActions,
     cardOpen,
     dashboardActions,
+
   } = props;
-  const {dashboard_id,column_id,card_id} = cardOpen;
-  const handleDelete = ()=> {
-    cardActions.removeCard(dashboard_id,column_id,card_id);
+  const {dashboard_id, column_id, card_id} = cardOpen;
+  const handleDelete = () => {
+    cardActions.removeCard(dashboard_id, column_id, card_id);
     dashboardActions.closeCardOpen();
   };
+  const buttons = [
+    {
+      children: 'Удалить карточку',
+      onClick: handleDelete,
+    }, {
+      children: 'Метки',
+      disabled : true,
+    }, {
+      children: 'Чек-лист',
+      disabled : true,
+    }, {
+      children: 'Срок',
+      disabled : true,
+    }, {
+      children: 'Вложение',
+      disabled : true,
+    }, {
+      children: 'Обложка',
+      disabled : true,
+    },
+
+
+
+  ];
+
   return (
-    <S.Buttons>
-      <S.Button
-        onClick={handleDelete}
-      >
-        Удалить карточку
-      </S.Button>
-    </S.Buttons>
+      <S.Buttons>
+        {
+          buttons.map((item, index) => {
+            return (
+                <S.Button
+                    key={'cardfull-button-' + index}
+                    {...item}
+                />
+            )
+          })
+        }
+      </S.Buttons>
   )
 };
 
-const S ={};
+const S = {};
 S.Buttons = styled.div`
  display : flex;
  flex-direction : column;
+ @media(max-width : 550px) {
+ display : grid;
+ grid-template-columns : 1fr 1fr;
+  grid-column-gap : 5px;
+ }
 `;
 
-S.Button = styled.button`
-  width : 100%;
-  padding : 10px 5px;
-  border-radius : 3px;
-  background-color : ${p=>p.theme.color.column};
-  :focus {
-    background-color : ${p=>p.theme.color.columnHover}
-  }
+S.Button = styled(SimpleButton)`
+ margin-bottom : 5px;
 `;
 
 export default Buttons;

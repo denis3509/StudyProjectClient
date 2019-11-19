@@ -102,6 +102,7 @@ S.ColumnsContainer =  styled.div`
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
+   
 }
 ::-webkit-scrollbar-button {
   width: 4px;

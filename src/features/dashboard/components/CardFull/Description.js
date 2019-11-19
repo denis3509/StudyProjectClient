@@ -1,7 +1,8 @@
 import React, {useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
+import CardFullTitle from "../../../../UI/titles/CardFullTitle";
 
-const CardFullContent = (props) => {
+const Description = (props) => {
   const {
     content,
     cardOpen,
@@ -22,8 +23,8 @@ const CardFullContent = (props) => {
   };
 
   return (
-    <S.WrapperContent>
-      <S.Title>Описание</S.Title>
+    <S.Description>
+      <CardFullTitle>Описание</CardFullTitle>
 
       <S.Content
         placeholder="Введите описание"
@@ -32,25 +33,19 @@ const CardFullContent = (props) => {
         onChange={handleOnChange}
       />
 
-    </S.WrapperContent>
+    </S.Description>
   )
 
 };
 
 const S = {};
-S.WrapperContent = styled.div`
-  display : flex;
+S.Description = styled.div`
+display : flex;
 flex-direction : column;
 align-items : flex-start;
 justify-content : flex-start;
 `;
-S.Title = styled.div`
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  color: ${p => p.theme.color.darkBlue};
-  margin-bottom : 10px;
-`;
+
 
 S.Content = styled.textarea`
 overflow: hidden;
@@ -82,4 +77,4 @@ overflow: hidden;
 `;
 
 
-export default CardFullContent
+export default Description
