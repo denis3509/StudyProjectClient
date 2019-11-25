@@ -14,6 +14,7 @@ const CardFull = (props) => {
     cardOpen,
     cardName,
     content,
+    checkListArray,
     isLoading,
     error,
     cardActions,
@@ -71,20 +72,29 @@ const CardFull = (props) => {
             dashboardActions={dashboardActions}
           />
           <S.Icon
-            style= {{marginLeft : 'auto'}}
-            onClick={()=>dashboardActions.closeCardOpen()}
+            style={{marginLeft: 'auto'}}
+            onClick={() => dashboardActions.closeCardOpen()}
             className="fas fa-times"/>
         </S.Top>
 
         <S.Center>
           <S.Main>
             <Description
-              cardActions ={cardActions}
+              cardActions={cardActions}
               content={content}
               cardOpen={cardOpen}
               dashboardActions={dashboardActions}
             />
-            <CheckList/>
+            {
+              checkListArray.map((checkList, index) => {
+                return (
+                  <CheckList
+                    {...checkList}
+                    checkList_ind={index}
+                  />
+                )
+              })
+            }
 
           </S.Main>
           <S.Right>

@@ -1,6 +1,5 @@
 import {createReducer, createDnD} from "../../../utils";
 import * as types from './constants'
-import cardFullReducer from './cardFull/cardFullReducer'
 
 const initialState = {
   dashboardName: null,
@@ -79,16 +78,6 @@ const dashboard = createReducer(initialState, {
     })
   },
 
-  [types.UPDATE_CARD_REQUEST]: (state, action) => {
-
-    return Object.assign({}, state, {
-
-      isLoading: false,
-      error: null,
-      card: cardFullReducer(state.card, action),
-    })
-  },
-
 
   [types.REMOVE_CARD_SUCCESS]: (state, action) => {
 
@@ -129,16 +118,7 @@ const dashboard = createReducer(initialState, {
     })
   },
 
-  [types.GET_CARD_REQUEST]: (state, action) => {
-    console.log('get card request reducer')
-    return Object.assign({}, state, {card: cardFullReducer(state.card, action)});
-  },
-  [types.GET_CARD_SUCCESS]: (state, action) => {
-    return Object.assign({}, state, {card: cardFullReducer(state.card, action)});
-  },
-  [types.GET_CARD_FAILURE]: (state, action) => {
-    return Object.assign({}, state, {card: cardFullReducer(state.card, action)});
-  },
+
 
   [types.SET_CARD_OPEN]: (state, action) => {
     const {dashboard_id, column_id, card_id} = action;

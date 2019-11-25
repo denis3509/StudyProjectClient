@@ -91,3 +91,39 @@ export const getCard = (dashboard_id, column_id, card_id) => async dispatch => {
     })
 };
 
+export const addCheckList = (checkListName = 'чек лист') => {
+  return {
+    type : types.ADD_CHECK_LIST,
+    checkListName,
+  }
+};
+
+export const removeCheckList = (checkList_ind)=> {
+  return {
+    type : types.REMOVE_CHECK_LIST,
+    checkList_ind,
+  }
+};
+
+export const addTask= (checkList_ind,taskContent) => {
+  return {
+    type : types.ADD_TASK,
+    checkList_ind,
+    taskContent,
+  }
+};
+export const removeTask = (checkList_ind, task_ind) => {
+  return {
+    type : types.REMOVE_TASK,
+    checkList_ind,
+    task_ind
+  }
+};
+
+export const toggleTask= (checkList_ind, task_ind) => {
+  return {
+    type : types.TOGGLE_TASK,
+    checkList_ind,
+    task_ind,
+  }
+};

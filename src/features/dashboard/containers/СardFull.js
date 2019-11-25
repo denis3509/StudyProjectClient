@@ -6,10 +6,11 @@ import * as dashboardActions from '../logic/actions'
 import CardFull from '../components/CardFull/CardFull'
 
 const mapStateToProps = (state) => ({
-  cardName: state.dashboard.card.cardName,
-  content: state.dashboard.card.content,
-  isLoading : state.dashboard.card.isLoading,
-  error : state.dashboard.card.error,
+  cardName: state.cardFull.cardName,
+  content: state.cardFull.content,
+  checkListArray : state.cardFull.checkListArray,
+  isLoading : state.cardFull.isLoading,
+  error : state.cardFull.error,
   cardOpen : state.dashboard.cardOpen,
 });
 const mapDispatchToProps = dispatch => ({
